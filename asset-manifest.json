@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/vacation-time/static/css/main.f855e6bc.css",
+    "main.js": "/vacation-time/static/js/main.6e2a727f.js",
+    "static/js/592.2e3648b3.chunk.js": "/vacation-time/static/js/592.2e3648b3.chunk.js",
+    "static/media/logo.svg": "/vacation-time/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/vacation-time/index.html",
+    "main.f855e6bc.css.map": "/vacation-time/static/css/main.f855e6bc.css.map",
+    "main.6e2a727f.js.map": "/vacation-time/static/js/main.6e2a727f.js.map",
+    "592.2e3648b3.chunk.js.map": "/vacation-time/static/js/592.2e3648b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.6e2a727f.js"
+  ]
+}
