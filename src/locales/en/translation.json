@@ -1,0 +1,16 @@
+{
+  "header": {
+    "home": "Home",
+    "about-us": "About us",
+    "reserve": "Reserve",
+    "contacts": "Contacts",
+    "account": "Account"
+  },
+
+  "footer": {
+    "text": "All rights reserved."
+  },
+  "poster": {
+    "text": "An authentic vacation in the midst of Ukrainian color!"
+  }
+}

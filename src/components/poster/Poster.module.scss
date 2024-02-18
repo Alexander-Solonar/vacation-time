@@ -1,0 +1,31 @@
+.mainPoster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+
+  height: 307px;
+  background-image: url('../../assets/images/main-poster.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.3;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.subTitle {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.3;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
