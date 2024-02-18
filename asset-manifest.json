@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/vacation-time/static/css/main.f855e6bc.css",
-    "main.js": "/vacation-time/static/js/main.6e2a727f.js",
+    "main.css": "/vacation-time/static/css/main.249532ea.css",
+    "main.js": "/vacation-time/static/js/main.9be04044.js",
+    "static/css/384.df21a719.chunk.css": "/vacation-time/static/css/384.df21a719.chunk.css",
+    "static/js/384.5a9d1706.chunk.js": "/vacation-time/static/js/384.5a9d1706.chunk.js",
     "static/js/592.2e3648b3.chunk.js": "/vacation-time/static/js/592.2e3648b3.chunk.js",
-    "static/media/logo.svg": "/vacation-time/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/pt-sans-v17-cyrillic_latin-700.woff": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-700.010771f5e70d72b467bb.woff",
+    "static/media/pt-sans-v17-cyrillic_latin-regular.woff": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-regular.88667d5b14f94a82329a.woff",
+    "static/media/pt-sans-v17-cyrillic_latin-italic.woff": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-italic.81c0d64409026817b2d2.woff",
+    "static/media/logo.svg": "/vacation-time/static/media/logo.9b5a4f0afbddb4620025020a4077d056.svg",
+    "static/media/pt-sans-v17-cyrillic_latin-700.woff2": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-700.0fad76779f1cdd0ba491.woff2",
+    "static/media/pt-sans-v17-cyrillic_latin-regular.woff2": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-regular.b29d8a5877fb70753625.woff2",
+    "static/media/pt-sans-v17-cyrillic_latin-italic.woff2": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-italic.f3594bfcca74db7dea97.woff2",
+    "static/media/pt-sans-v17-cyrillic_latin-700italic.woff": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-700italic.42bd27894a4fb0896b07.woff",
+    "static/media/pt-sans-v17-cyrillic_latin-700italic.woff2": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-700italic.72048baa4473d74204e7.woff2",
+    "static/media/main-poster.jpg": "/vacation-time/static/media/main-poster.1e1dddb1467149606b50.jpg",
+    "static/media/icon-lng.svg": "/vacation-time/static/media/icon-lng.66d288c504b0106fe52de48501efaabb.svg",
     "index.html": "/vacation-time/index.html",
-    "main.f855e6bc.css.map": "/vacation-time/static/css/main.f855e6bc.css.map",
-    "main.6e2a727f.js.map": "/vacation-time/static/js/main.6e2a727f.js.map",
+    "static/media/getFetch.cjs": "/vacation-time/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.249532ea.css.map": "/vacation-time/static/css/main.249532ea.css.map",
+    "main.9be04044.js.map": "/vacation-time/static/js/main.9be04044.js.map",
+    "384.df21a719.chunk.css.map": "/vacation-time/static/css/384.df21a719.chunk.css.map",
+    "384.5a9d1706.chunk.js.map": "/vacation-time/static/js/384.5a9d1706.chunk.js.map",
     "592.2e3648b3.chunk.js.map": "/vacation-time/static/js/592.2e3648b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.6e2a727f.js"
+    "static/css/main.249532ea.css",
+    "static/js/main.9be04044.js"
   ]
 }
