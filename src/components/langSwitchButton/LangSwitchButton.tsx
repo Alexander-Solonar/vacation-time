@@ -16,7 +16,7 @@ const LangSwitchButton = () => {
   return (
     <div className={scss.containerBtnLang}>
       <button className={scss.buttonLang} onClick={handleClick}>
-        <img src={icon} alt="icon-lang" />
+        <img src={icon} alt="icon-lang" width={60} />
         <span className={scss.lang}>{i18n.resolvedLanguage}</span>
       </button>
       {isOpenMenuLang && <LangSwitchMenu />}

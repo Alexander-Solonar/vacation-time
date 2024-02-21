@@ -1,0 +1,25 @@
+.sectionSecondPoster {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 30px 70px;
+
+  background-color: rgba(193, 193, 195, 0.9);
+}
+
+.text {
+  display: flex;
+  flex: 1 0 288px;
+  align-items: center;
+  padding: 50px 20px;
+
+  font-family: 'PT Sans';
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.36;
+  text-align: center;
+
+  color: rgb(32, 40, 70);
+  background-color: #eaeaeb;
+}

@@ -10,7 +10,23 @@
   "footer": {
     "text": "All rights reserved."
   },
-  "poster": {
+  "main-poster": {
     "text": "An authentic vacation in the midst of Ukrainian color!"
+  },
+
+  "second-poster": {
+    "text": "Active recreation in unusual locations. Pristine nature and local flavor will give you unforgettable impressions."
+  },
+  "feedbackForm": {
+    "title": "Feedback",
+    "name": "Name",
+    "phone": "Phone number",
+    "button": "Request a call",
+    "placeholderName": "Enter Name",
+    "placeholderPhone": "Enter a phone number"
+  },
+  "notiflix": {
+    "title": "Thank you",
+    "message": "Our representative will contact you shortly at your number"
   }
 }
