@@ -9,7 +9,7 @@
   width: 47px;
   height: 106px;
 
-  background-color: #202846;
+  background-color: var(--primary-color);
 }
 
 .button {
@@ -23,6 +23,6 @@
   cursor: pointer;
   border: 0;
 
-  color: rgb(255, 255, 255);
+  color: var(--primary-white-color);
   background-color: transparent;
 }

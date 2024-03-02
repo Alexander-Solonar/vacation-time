@@ -1,15 +1,16 @@
 import FeedbackForm from '../../components/feedbackForm';
 import SectionMainPoster from '../../components/sectionMainPoster';
 import SectionSecondPoster from '../../components/sectionSecondPoster';
-import scss from './Home.module.scss';
+import SlideSwiper from '../../components/slideSwiper';
 
 const Home = () => {
   return (
-    <div className={scss.pageHome}>
-      <SectionMainPoster />
+    <>
+      {/* <SectionMainPoster /> */}
+      {/* <SlideSwiper />
       <SectionSecondPoster />
-      <FeedbackForm />
-    </div>
+      <FeedbackForm /> */}
+    </>
   );
 };
 

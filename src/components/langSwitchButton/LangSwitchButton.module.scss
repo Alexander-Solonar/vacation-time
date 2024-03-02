@@ -1,8 +1,8 @@
-.containerBtnLang {
+.block-lang-btn {
   position: relative;
 }
 
-.buttonLang {
+.lang-btn {
   display: flex;
   align-items: center;
   column-gap: 8px;
@@ -11,14 +11,29 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  &:hover svg,
+  &:hover span {
+    color: var(--primary-blue-color);
+    fill: var(--primary-blue-color);
+  }
 }
 
-.lang {
+.lang-icon {
+  fill: var(--primary-white-color);
+  transition: fill 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-text {
   font-family: 'PT Sans';
   font-weight: 700;
   font-size: 24px;
   line-height: 1.28;
   text-transform: uppercase;
+  color: var(--primary-white-color);
+  transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  color: rgb(255, 255, 255);
+  @media screen and (max-width: 424px) {
+    display: none;
+  }
 }

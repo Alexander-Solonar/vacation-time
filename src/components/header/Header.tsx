@@ -2,6 +2,7 @@ import Navigation from '../navigation';
 import LangSwitchButton from '../langSwitchButton';
 import Logo from '../logo/Logo';
 import scss from './Header.module.scss';
+import BurgerButton from '../burgerButton';
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       <div className={scss.appBar}>
         <Logo />
         <Navigation />
+        <BurgerButton />
         <LangSwitchButton />
       </div>
     </header>

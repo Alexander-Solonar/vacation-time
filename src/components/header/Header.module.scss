@@ -4,11 +4,12 @@
   align-items: center;
   height: 75px;
 
-  background-color: #202846;
+  background-color: var(--primary-color);
 }
 
 .appBar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
   max-width: 1457px;

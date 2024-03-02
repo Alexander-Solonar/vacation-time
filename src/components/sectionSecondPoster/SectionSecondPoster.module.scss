@@ -5,7 +5,7 @@
   gap: 18px;
   padding: 30px 70px;
 
-  background-color: rgba(193, 193, 195, 0.9);
+  background-color: var(--secondary-gray-color);
 }
 
 .text {
@@ -20,6 +20,6 @@
   line-height: 1.36;
   text-align: center;
 
-  color: rgb(32, 40, 70);
-  background-color: #eaeaeb;
+  color: var(--primary-color);
+  background-color: var(--primary-gray-color);
 }

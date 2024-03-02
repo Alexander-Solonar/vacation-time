@@ -1,0 +1,23 @@
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--primary-white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: var(--primary-blue-color);
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.open-menu {
+  fill: var(--primary-blue-color);
+}

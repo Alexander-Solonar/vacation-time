@@ -1,0 +1,41 @@
+.mySwiper {
+  position: relative;
+}
+
+.content {
+  position: relative;
+}
+
+.blockDesc {
+  position: absolute;
+  max-width: 78%;
+  bottom: 0;
+  padding: 45px 26px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.text {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.29;
+  color: var(--primary-color);
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  top: -31px;
+  right: 0;
+  padding: 17px 25px 17px 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.29;
+  cursor: pointer;
+  border-radius: 50px;
+  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
+  background-color: var(--primary-color);
+}
