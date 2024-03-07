@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vacation-time/static/css/main.7e938e59.css",
+    "main.css": "/vacation-time/static/css/main.9b08e880.css",
     "main.js": "/vacation-time/static/js/main.03dc0c52.js",
     "static/css/288.63695174.chunk.css": "/vacation-time/static/css/288.63695174.chunk.css",
     "static/js/288.b05bef98.chunk.js": "/vacation-time/static/js/288.b05bef98.chunk.js",
@@ -18,14 +18,14 @@
     "static/media/icons.svg": "/vacation-time/static/media/icons.452054e6783ebb745fdf5656cf0c7364.svg",
     "index.html": "/vacation-time/index.html",
     "static/media/getFetch.cjs": "/vacation-time/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.7e938e59.css.map": "/vacation-time/static/css/main.7e938e59.css.map",
+    "main.9b08e880.css.map": "/vacation-time/static/css/main.9b08e880.css.map",
     "main.03dc0c52.js.map": "/vacation-time/static/js/main.03dc0c52.js.map",
     "288.63695174.chunk.css.map": "/vacation-time/static/css/288.63695174.chunk.css.map",
     "288.b05bef98.chunk.js.map": "/vacation-time/static/js/288.b05bef98.chunk.js.map",
     "592.2e3648b3.chunk.js.map": "/vacation-time/static/js/592.2e3648b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e938e59.css",
+    "static/css/main.9b08e880.css",
     "static/js/main.03dc0c52.js"
   ]
 }
