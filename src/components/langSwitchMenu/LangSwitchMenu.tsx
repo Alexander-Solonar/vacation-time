@@ -14,11 +14,11 @@ const LangSwitchMenu = () => {
   };
 
   return (
-    <ul className={scss.menu}>
+    <ul className={scss.list}>
       {arrLanguages.map((lang, index) => (
-        <li key={index}>
+        <li key={index} className={scss.item}>
           <button
-            className={scss.button}
+            className={scss['lang-btn']}
             onClick={e =>
               changeLanguage((e.target as HTMLButtonElement).innerText)
             }

@@ -5,15 +5,15 @@ import icons from '../../assets/images/icons.svg';
 import scss from './BurgerButton.module.scss';
 
 const BurgerButton = () => {
-  const { isOpenBurgerMenu, setIsOpenBurgerMenu } = useContext(Context);
+  const { isOpenMobMenu, setIsOpenMobMenu } = useContext(Context);
 
   const handleClick = () => {
-    setIsOpenBurgerMenu(prevState => !prevState);
+    setIsOpenMobMenu(prevState => !prevState);
   };
 
   return (
     <>
-      {!isOpenBurgerMenu && (
+      {!isOpenMobMenu && (
         <button className={scss['burger']}>
           <svg width="58" height="58" onClick={handleClick}>
             <use href={`${icons}#burger-close`} />
@@ -21,12 +21,9 @@ const BurgerButton = () => {
         </button>
       )}
 
-      {isOpenBurgerMenu && (
+      {isOpenMobMenu && (
         <button
-          className={clsx(
-            scss['burger'],
-            isOpenBurgerMenu && scss['open-menu']
-          )}
+          className={clsx(scss['burger'], isOpenMobMenu && scss['open-menu'])}
         >
           <svg width="58" height="58" onClick={handleClick}>
             <use href={`${icons}#burger-open`} />
