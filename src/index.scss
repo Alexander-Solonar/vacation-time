@@ -7,9 +7,7 @@ body {
   font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
+  background-color: var(--primary-gray-color);
 }
 
 .swiper-button-prev,
@@ -65,6 +63,11 @@ code {
   margin: 0 5px;
   border-radius: 50%;
   cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .swiper-pagination-bullet-active {

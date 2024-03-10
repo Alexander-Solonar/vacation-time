@@ -11,7 +11,9 @@
   background-color: transparent;
 
   &:hover svg,
-  &:hover span {
+  &:hover span,
+  &:focus svg,
+  &:focus span {
     color: var(--primary-blue-color);
     fill: var(--primary-blue-color);
   }
