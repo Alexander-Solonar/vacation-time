@@ -20,5 +20,9 @@
 <path d="M0 6h28v6h-28v-6zM0 14h28v6h-28v-6zM0 22h28v6h-28v-6z"></path>
 <path d="M31 20l6-6 6 6z"></path>
 </symbol>
+
+<symbol id="arrow-top" viewBox="0 0 16 32">
+<path d="M9.112 13.438v18.562h-2.707v-18.562h-6.405l7.758-13.438 7.758 13.438h-6.405z"></path>
+</symbol>
 </defs>
 </svg>

@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vacation-time/static/css/main.9726b22a.css",
-    "main.js": "/vacation-time/static/js/main.b485ca5a.js",
-    "static/css/612.e0df59fd.chunk.css": "/vacation-time/static/css/612.e0df59fd.chunk.css",
+    "main.css": "/vacation-time/static/css/main.6c16a8cd.css",
+    "main.js": "/vacation-time/static/js/main.e5e4d1ce.js",
+    "static/css/612.daabf853.chunk.css": "/vacation-time/static/css/612.daabf853.chunk.css",
     "static/js/612.0af7a9d8.chunk.js": "/vacation-time/static/js/612.0af7a9d8.chunk.js",
     "static/js/592.2e3648b3.chunk.js": "/vacation-time/static/js/592.2e3648b3.chunk.js",
     "static/js/432.5ceab2a7.chunk.js": "/vacation-time/static/js/432.5ceab2a7.chunk.js",
@@ -18,18 +18,18 @@
     "static/media/pt-sans-v17-cyrillic_latin-700italic.woff2": "/vacation-time/static/media/pt-sans-v17-cyrillic_latin-700italic.72048baa4473d74204e7.woff2",
     "static/media/main-poster.jpg": "/vacation-time/static/media/main-poster.1e1dddb1467149606b50.jpg",
     "static/media/second-poster.jpg": "/vacation-time/static/media/second-poster.5fc305b08c6cfa223982.jpg",
-    "static/media/icons.svg": "/vacation-time/static/media/icons.452054e6783ebb745fdf5656cf0c7364.svg",
+    "static/media/icons.svg": "/vacation-time/static/media/icons.1f661ef13a02abea4dff765b4ec41a6d.svg",
     "index.html": "/vacation-time/index.html",
     "static/media/getFetch.cjs": "/vacation-time/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.9726b22a.css.map": "/vacation-time/static/css/main.9726b22a.css.map",
-    "main.b485ca5a.js.map": "/vacation-time/static/js/main.b485ca5a.js.map",
-    "612.e0df59fd.chunk.css.map": "/vacation-time/static/css/612.e0df59fd.chunk.css.map",
+    "main.6c16a8cd.css.map": "/vacation-time/static/css/main.6c16a8cd.css.map",
+    "main.e5e4d1ce.js.map": "/vacation-time/static/js/main.e5e4d1ce.js.map",
+    "612.daabf853.chunk.css.map": "/vacation-time/static/css/612.daabf853.chunk.css.map",
     "612.0af7a9d8.chunk.js.map": "/vacation-time/static/js/612.0af7a9d8.chunk.js.map",
     "592.2e3648b3.chunk.js.map": "/vacation-time/static/js/592.2e3648b3.chunk.js.map",
     "432.5ceab2a7.chunk.js.map": "/vacation-time/static/js/432.5ceab2a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9726b22a.css",
-    "static/js/main.b485ca5a.js"
+    "static/css/main.6c16a8cd.css",
+    "static/js/main.e5e4d1ce.js"
   ]
 }
