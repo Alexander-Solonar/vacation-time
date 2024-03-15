@@ -5,10 +5,14 @@ const SectionMainPoster = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={scss.sectionMainPoster}>
-      <h1 className={scss.title}>VacationTime</h1>
-      <h2 className={scss.subTitle}>{t('main-poster.text')}</h2>
-    </div>
+    <section className={scss['main-poster']}>
+      <div className="container">
+        <div className={scss.content}>
+          <h1 className={scss.title}>VacationTime</h1>
+          <h2 className={scss.subTitle}>{t('main-poster.text')}</h2>
+        </div>
+      </div>
+    </section>
   );
 };
 

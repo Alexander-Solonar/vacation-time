@@ -29,11 +29,9 @@ const Layout = () => {
     <div className={scss.wrapper}>
       <Header />
       <main className={scss.main}>
-        <div className={scss.container}>
-          <Suspense fallback="Loader">
-            <Outlet />
-          </Suspense>
-        </div>
+        <Suspense fallback="Loader...">
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <ScrollTopButtom />

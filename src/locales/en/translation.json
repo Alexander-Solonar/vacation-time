@@ -30,6 +30,18 @@
     "placeholderName": "Enter Name",
     "placeholderPhone": "Enter a phone number"
   },
+
+  "about-us": {
+    "title": "About Us",
+    "poster-title": "VacationTime",
+    "poster-sub-title": "Rest, emotions, impressions, atypical routes, incredible locations - this is all about rural eco-tourism in Ukraine.",
+    "text": {
+      "first-paragraph": "Our team has collected the most colorful places in our country for you.",
+      "second-paragraph": "The mission of our company is to provide an unforgettable experience and show Ukraine from a different side. Walk with you along the forest paths to eat fresh Carpathian cheese. Dive into the canyon and see the village of Bakota submerged under the thickness of the years. Ride gondolas in the “Ukrainian Venice”.",
+      "third-paragraph": "Explore Ukraine together!"
+    }
+  },
+
   "notiflix": {
     "title": "Thank you",
     "message": "Our representative will contact you shortly at your number"

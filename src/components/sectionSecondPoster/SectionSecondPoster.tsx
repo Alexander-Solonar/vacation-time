@@ -6,10 +6,14 @@ const SectionSecondPoster = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={scss.sectionSecondPoster}>
-      <img src={image} alt="man and women" width={580} />
-      <p className={scss.text}>{t('second-poster.text')}</p>
-    </div>
+    <section className={scss['second-poster']}>
+      <div className="container">
+        <div className={scss.content}>
+          <img src={image} alt="man and women" width={580} />
+          <p className={scss.text}>{t('second-poster.text')}</p>
+        </div>
+      </div>
+    </section>
   );
 };
 

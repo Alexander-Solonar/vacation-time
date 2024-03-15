@@ -64,40 +64,44 @@ const FeedbackForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={schema}
-      onSubmit={handleSubmit}
-    >
-      <Form className={scss.form}>
-        <h3 className={scss.formTitle}>{t('feedbackForm.title')}</h3>
-        <div className={scss.blockInpit}>
-          <label className={scss.label}>
-            {t('feedbackForm.name')}
-            <Field
-              className={scss.input}
-              type="text"
-              name="name"
-              placeholder={t('feedbackForm.placeholderName')}
-            />
-            <FormError name="name" />
-          </label>
-          <label className={scss.label}>
-            {t('feedbackForm.phone')}
-            <Field
-              className={scss.input}
-              type="phone"
-              name="phone"
-              placeholder={t('feedbackForm.placeholderPhone')}
-            />
-            <FormError name="phone" />
-          </label>
-        </div>
-        <button className={scss.button} type="submit">
-          {t('feedbackForm.button')}
-        </button>
-      </Form>
-    </Formik>
+    <section className={scss['feedback-form']}>
+      <div className="container">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={schema}
+          onSubmit={handleSubmit}
+        >
+          <Form className={scss.form}>
+            <h3 className={scss.formTitle}>{t('feedbackForm.title')}</h3>
+            <div className={scss.blockInpit}>
+              <label className={scss.label}>
+                {t('feedbackForm.name')}
+                <Field
+                  className={scss.input}
+                  type="text"
+                  name="name"
+                  placeholder={t('feedbackForm.placeholderName')}
+                />
+                <FormError name="name" />
+              </label>
+              <label className={scss.label}>
+                {t('feedbackForm.phone')}
+                <Field
+                  className={scss.input}
+                  type="phone"
+                  name="phone"
+                  placeholder={t('feedbackForm.placeholderPhone')}
+                />
+                <FormError name="phone" />
+              </label>
+            </div>
+            <button className={scss.button} type="submit">
+              {t('feedbackForm.button')}
+            </button>
+          </Form>
+        </Formik>
+      </div>
+    </section>
   );
 };
 

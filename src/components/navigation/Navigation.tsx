@@ -15,7 +15,7 @@ const Navigation = () => {
         </li>
         <li className={scss.line}></li>
         <li className={scss.item}>
-          <NavLink className={scss.link} to="/">
+          <NavLink className={scss.link} to="/about-us">
             {t('header.about-us')}
           </NavLink>
         </li>
