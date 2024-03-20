@@ -42,6 +42,20 @@
     }
   },
 
+  "contacts": {
+    "title": "Contacts",
+    "phone": "Phone",
+    "schedule": "Schedule",
+    "days": {
+      "mon-fri": "mon-fri",
+      "sat": "sat",
+      "sun": "sun"
+    },
+    "email": "Email",
+    "address-title": "Office address",
+    "address": "Kyiv, st. Malevich, house. 4"
+  },
+
   "notiflix": {
     "title": "Thank you",
     "message": "Our representative will contact you shortly at your number"

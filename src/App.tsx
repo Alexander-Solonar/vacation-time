@@ -5,6 +5,7 @@ import Layout from './components/layout';
 
 const Home = lazy(() => import('../src/pages/home/Home'));
 const AboutUs = lazy(() => import('../src/pages/aboutUs/AboutUs'));
+const Contacts = lazy(() => import('../src/pages/contacts/Contacts'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
+          <Route path="contacts" element={<Contacts />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
