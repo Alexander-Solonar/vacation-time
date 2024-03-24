@@ -1,0 +1,23 @@
+.box-title {
+  margin-bottom: 23px;
+  background: #c6c6dc;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  max-width: 1457px;
+  height: 116px;
+  margin: 0 auto;
+  padding-left: 140px;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.45;
+  font-style: italic;
+  color: var(--primary-color);
+
+  @media screen and (max-width: 424px) {
+    padding-left: 50px;
+    font-size: 36px;
+  }
+}
