@@ -1,5 +1,6 @@
 .box-title {
   margin-bottom: 23px;
+
   background: #c6c6dc;
 }
 
@@ -16,7 +17,7 @@
   font-style: italic;
   color: var(--primary-color);
 
-  @media screen and (max-width: 424px) {
+  @media screen and (max-width: 767px) {
     padding-left: 50px;
     font-size: 36px;
   }

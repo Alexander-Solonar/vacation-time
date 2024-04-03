@@ -59,5 +59,12 @@
   "notiflix": {
     "title": "Thank you",
     "message": "Our representative will contact you shortly at your number"
+  },
+  "filter": {
+    "title": "Choose a location",
+    "bakota": "Bakota",
+    "carpathians": "Carpathians",
+    "kyiv": "Kyiv",
+    "odessa": "Odessa region"
   }
 }

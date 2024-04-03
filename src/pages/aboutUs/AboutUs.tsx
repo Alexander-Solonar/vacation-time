@@ -5,7 +5,7 @@ import scss from './AboutUs.module.scss';
 const AboutUs = () => {
   const { t } = useTranslation();
   return (
-    <section className={scss['about-us']}>
+    <section className={scss['page-about-us']}>
       <PageTitle name={t('about-us.title')} />
       <div className="container">
         <div className={scss.poster}>

@@ -1,16 +1,23 @@
 :root {
-  --primary-color: #202846;
-  --secondary-color: #444765;
-  --third-color: #27283a;
-  --fourth-color: #552db133;
-  --primary-white-color: #ffffff;
-  --secondary-white-color: #eeecf1;
-  --third-white-color: #f2eeee;
-  --primary-blue-color: #64b2da;
-  --secondary-blue-color: #90a4ae;
-  --primary-red-color: #ff0000;
-  --primary-gray-color: #eaeaeb;
-  --secondary-gray-color: #c1c1c3e6;
-  --third-gray-color: #aaaaaa33;
-  --primary-green-color: #32c682;
+  --primary-violet-color: #202846;
+  --secondary-violet-color: #2e3963;
+
+  --primary-white-color: #ffffff; /*белый*/
+
+  --primary-black-color: #000000; /*черный*/
+
+  --primary-blue-color: #64b2da; /*синий*/
+
+  --third-white-color: #f2eeee; /*серый*/
+  /*--primary-gray-color: #eaeaeb; /*серый*/
+  /* --secondary-white-color: #eeecf1; /*серый*/
+  /*--secondary-gray-color: #c1c1c3e6; /*серый*/
+  --secondary-blue-color: #90a4ae; /*серый*/
+  --third-gray-color: #aaaaaa33; /*серый*/
+
+  /*--third-blue-color: #292a31; /*синий*/
+
+  --primary-red-color: #ff0000; /*красный*/
+
+  --primary-green-color: #32c682; /*зеленый*/
 }
