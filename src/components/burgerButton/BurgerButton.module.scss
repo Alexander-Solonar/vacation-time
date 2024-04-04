@@ -6,12 +6,12 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  fill: var(--primary-white-color);
+  fill: #ffffff;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    fill: var(--primary-blue-color);
+    fill: #64b2da;
   }
 
   @media screen and (min-width: 1024px) {
@@ -20,5 +20,5 @@
 }
 
 .open-menu {
-  fill: var(--primary-blue-color);
+  fill: #64b2da;
 }

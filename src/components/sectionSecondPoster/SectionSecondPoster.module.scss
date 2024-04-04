@@ -5,7 +5,7 @@
   gap: 18px;
   margin-top: 50px;
   padding: 30px 70px;
-  background-color: var(--secondary-gray-color);
+  background-color: #c1c1c3e6;
 }
 
 .text {
@@ -18,8 +18,8 @@
   font-weight: 400;
   line-height: 1.36;
   text-align: center;
-  color: var(--primary-color);
-  background-color: var(--primary-gray-color);
+  color: #202846;
+  background-color: #dcdcdc;
 
   @media screen and (max-width: 424px) {
     font-size: 18px;

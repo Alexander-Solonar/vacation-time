@@ -2,7 +2,7 @@
   display: flex;
   height: 75px;
   padding: 15px 0;
-  background-color: var(--primary-violet-color);
+  background-color: #202846;
 }
 
 .footerContainer {
@@ -20,7 +20,7 @@
   font-weight: 400;
   line-height: 1.3;
   text-align: center;
-  color: var(--secondary-white-color);
+  color: #eeecf1;
 
   @media screen and (max-width: 767px) {
     font-size: 24px;

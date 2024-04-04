@@ -18,7 +18,7 @@ const Filter = () => {
   ];
 
   const customStyles = {
-    control: (provided: object, state: { isFocused: boolean }) => ({
+    control: (provided: object) => ({
       ...provided,
       height: '60px',
       fontSize: '24px',
@@ -35,8 +35,9 @@ const Filter = () => {
     }),
     option: (provided: object) => ({
       ...provided,
-      color: 'inherit',
+      fontStyle: 'italic',
       cursor: 'pointer',
+      color: '#292a31',
       backgroundColor: '#a3a5a9f7',
       '&:not(:last-child)': {
         borderBottom: '2px solid #e8e8e8',
@@ -44,6 +45,10 @@ const Filter = () => {
       '&:hover': {
         backgroundColor: '#e8e8e8',
       },
+    }),
+    placeholder: (provided: object) => ({
+      ...provided,
+      color: '#0000009b',
     }),
   };
 

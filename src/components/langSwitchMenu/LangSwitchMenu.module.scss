@@ -7,7 +7,7 @@
   top: 50px;
   right: -9.5px;
   width: 47px;
-  background-color: var(--primary-color);
+  background-color: #202846;
 }
 .item {
   width: 100%;
@@ -17,17 +17,18 @@
 
   &:hover,
   &:focus {
-    background-color: var(--primary-blue-color);
+    background-color: #64b2da;
   }
 }
 
 .lang-btn {
+  width: 100%;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.28;
   text-transform: uppercase;
   cursor: pointer;
   border: 0;
-  color: var(--primary-white-color);
+  color: #ffffff;
   background-color: transparent;
 }
