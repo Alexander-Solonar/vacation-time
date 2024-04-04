@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/512.7239f23b.chunk.js","mappings":"uJAAA,MAIA,EAJgBA,KACPC,EAAAA,EAAAA,KAAA,S","sources":["pages/reserve/Reserve.tsx"],"sourcesContent":["const Reserve = () => {\n  return <div></div>;\n};\n\nexport default Reserve;\n"],"names":["Reserve","_jsx"],"sourceRoot":""}
