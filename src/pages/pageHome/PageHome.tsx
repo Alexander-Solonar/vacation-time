@@ -3,7 +3,7 @@ import SlideSwiper from '../../components/slideSwiper';
 import FeedbackForm from '../../components/feedbackForm';
 import SectionSecondPoster from '../../components/sectionSecondPoster';
 
-const Home = () => {
+const PageHome = () => {
   return (
     <>
       <SectionMainPoster />
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PageHome;

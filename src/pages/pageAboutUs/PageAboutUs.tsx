@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import PageTitle from '../../components/pageTitle';
-import scss from './AboutUs.module.scss';
+import scss from './PageAboutUs.module.scss';
 
-const AboutUs = () => {
+const PageAboutUs = () => {
   const { t } = useTranslation();
   return (
-    <section className={scss['page-about-us']}>
+    <div className={scss['page-about-us']}>
       <PageTitle name={t('about-us.title')} />
       <div className="container">
         <div className={scss.poster}>
@@ -25,8 +25,8 @@ const AboutUs = () => {
           {t('about-us.text.third-paragraph')}
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default AboutUs;
+export default PageAboutUs;

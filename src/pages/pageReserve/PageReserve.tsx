@@ -1,9 +1,9 @@
 import Filter from '../../components/filter';
 import HousesList from '../../components/housesList';
 import PageTitle from '../../components/pageTitle';
-import scss from './Reserve.module.scss';
+import scss from './PageReserve.module.scss';
 
-const Reserve = () => {
+const PageReserve = () => {
   return (
     <div className={scss['page-reserve']}>
       <PageTitle name="Забронювати будиночок" />
@@ -15,4 +15,4 @@ const Reserve = () => {
   );
 };
 
-export default Reserve;
+export default PageReserve;

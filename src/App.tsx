@@ -3,10 +3,11 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import ContextProvider from './context/Context';
 import Layout from './components/layout';
 
-const Home = lazy(() => import('../src/pages/home/Home'));
-const AboutUs = lazy(() => import('../src/pages/aboutUs/AboutUs'));
-const Contacts = lazy(() => import('../src/pages/contacts/Contacts'));
-const Reserve = lazy(() => import('../src/pages/reserve/Reserve'));
+const Home = lazy(() => import('../src/pages/pageHome/PageHome'));
+const PageAboutUs = lazy(() => import('../src/pages/pageAboutUs/PageAboutUs'));
+const Contacts = lazy(() => import('../src/pages/pageContacts/PageContacts'));
+const PageReserve = lazy(() => import('../src/pages/pageReserve/PageReserve'));
+const PageAccount = lazy(() => import('../src/pages/pageAccount/PageAccount'));
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about-us" element={<AboutUs />} />
+          <Route path="about-us" element={<PageAboutUs />} />
           <Route path="contacts" element={<Contacts />} />
-          <Route path="reserve" element={<Reserve />} />
+          <Route path="reserve" element={<PageReserve />} />
+          <Route path="account" element={<PageAccount />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
