@@ -6,7 +6,7 @@ import { throttle } from 'lodash';
 import Header from '../header';
 import Footer from '../footer';
 import scss from './Layout.module.scss';
-import ScrollTopButtom from '../scrollTopButtom';
+import ScrollTopButton from '../scrollTopButton';
 import MobileMenu from '../mobileMenu';
 
 const Layout = () => {
@@ -34,7 +34,7 @@ const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-      <ScrollTopButtom />
+      <ScrollTopButton />
       <MobileMenu />
     </div>
   );

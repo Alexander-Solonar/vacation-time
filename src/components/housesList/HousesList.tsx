@@ -5,6 +5,8 @@ import icons from '../../assets/images/icons.svg';
 import scss from './HousesList.module.scss';
 import { useState } from 'react';
 
+const houses = [1, 2, 3, 4, 5];
+
 const HousesList = () => {
   const [isStarClicked, setIsStarClicked] = useState(false);
 
@@ -18,149 +20,34 @@ const HousesList = () => {
 
   return (
     <ul className={scss['house-list']}>
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
-
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
-
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
-
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
-
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
-
-      <li className={scss['house-item']}>
-        <img src={bakota} width={485} alt="bakota" />
-        <div className={scss['description-block']}>
-          <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-          <p className={scss['house-text']}>
-            У Хмельницькій області розташований загублений край - Бакота.
-            Мальовничий каньйон з давньою історією захоплює своїми просторами та
-            незвичною атмосферою. Бджільництво, свіжий мед із польових трав,
-            дотик до природи.
-          </p>
-        </div>
-        <Link className={scss['more-details-button']} to="#">
-          Детальніше
-        </Link>
-        <svg
-          className={SvgClassName}
-          width="42"
-          height="42"
-          onClick={handleFavoriteIcon}
-        >
-          <use href={`${icons}#icon-star`} />
-        </svg>
-      </li>
+      {houses.map(e => (
+        <li key={e} className={scss['house-item']}>
+          <img src={bakota} width={485} alt="bakota" />
+          <div className={scss['description-block']}>
+            <h2 className={scss['house-title']}>Незвідана Бакота</h2>
+            <p className={scss['house-text']}>
+              У Хмельницькій області розташований загублений край - Бакота.
+              Мальовничий каньйон з давньою історією захоплює своїми просторами
+              та незвичною атмосферою. Бджільництво, свіжий мед із польових
+              трав, дотик до природи.
+            </p>
+          </div>
+          <Link
+            className={scss['more-details-button']}
+            to={`/reserve/house-${e}`}
+          >
+            Детальніше
+          </Link>
+          <svg
+            className={SvgClassName}
+            width="42"
+            height="42"
+            onClick={handleFavoriteIcon}
+          >
+            <use href={`${icons}#icon-star`} />
+          </svg>
+        </li>
+      ))}
     </ul>
   );
 };

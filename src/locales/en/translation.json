@@ -66,5 +66,16 @@
     "carpathians": "Carpathians",
     "kyiv": "Kyiv",
     "odessa": "Odessa region"
+  },
+
+  "account": {
+    "title": "Account",
+    "sex": "Sex",
+    "date-birth": "Date of birth",
+    "phone": "CellPhone",
+    "email": "Email",
+    "change-avatar-btn": "Change avatar",
+    "settings-btn": "Settings",
+    "exit-btn": "Exit"
   }
 }

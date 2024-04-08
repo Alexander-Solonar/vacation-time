@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
 import icons from '../../assets/images/icons.svg';
-import scss from './ScrollTopButtom.module.scss';
+import scss from './ScrollTopButton.module.scss';
 
-const ScrollTopButtom = () => {
-  const [isShowButtom, setIsShowButtom] = useState(false);
+const ScrollTopButton = () => {
+  const [isShowButton, setIsShowButton] = useState(false);
 
   let windowHeight = window.innerHeight;
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      if (window.scrollY > windowHeight / 2) {
-        setIsShowButtom(true);
+      if (window.scrollY > windowHeight / 1.5) {
+        setIsShowButton(true);
       } else {
-        setIsShowButtom(false);
+        setIsShowButton(false);
       }
     }, 250);
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +35,7 @@ const ScrollTopButtom = () => {
 
   return (
     <>
-      {isShowButtom && (
+      {isShowButton && (
         <button className={scss.button} onClick={handleScrollTo}>
           <svg className={scss.icon} width={23} height={43}>
             <use href={`${icons}#arrow-top`}></use>
@@ -46,4 +46,4 @@ const ScrollTopButtom = () => {
   );
 };
 
-export default ScrollTopButtom;
+export default ScrollTopButton;

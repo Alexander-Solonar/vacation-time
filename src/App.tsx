@@ -7,6 +7,9 @@ const Home = lazy(() => import('../src/pages/pageHome/PageHome'));
 const PageAboutUs = lazy(() => import('../src/pages/pageAboutUs/PageAboutUs'));
 const Contacts = lazy(() => import('../src/pages/pageContacts/PageContacts'));
 const PageReserve = lazy(() => import('../src/pages/pageReserve/PageReserve'));
+const PageHouseBooking = lazy(
+  () => import('../src/pages/pageHouseBooking/PageHouseBooking')
+);
 const PageAccount = lazy(() => import('../src/pages/pageAccount/PageAccount'));
 
 function App() {
@@ -18,6 +21,7 @@ function App() {
           <Route path="about-us" element={<PageAboutUs />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="reserve" element={<PageReserve />} />
+          <Route path="reserve/:houseId" element={<PageHouseBooking />} />
           <Route path="account" element={<PageAccount />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>

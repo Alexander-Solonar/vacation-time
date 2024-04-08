@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import userAvatar from '../../assets/images/user-avatar.png';
 import scss from './UserCard.module.scss';
 
 const UserCard = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={scss['user-card']}>
       <div className={scss['info-block']}>
@@ -13,9 +16,11 @@ const UserCard = () => {
           />
           <div className={scss['buttons-block']}>
             <button className={scss['change-avatar-btn']}>
-              Змінити аватар
+              {t('account.change-avatar-btn')}
             </button>
-            <button className={scss['setting-btn']}>Налаштування</button>
+            <button className={scss['setting-btn']}>
+              {t('account.settings-btn')}
+            </button>
           </div>
         </div>
         <ul className={scss['info-list']}>
@@ -26,31 +31,31 @@ const UserCard = () => {
           </li>
           <li className={scss['info-item']}>
             <p>
-              <span className={scss['text']}>Стать: </span>
+              <span className={scss['text']}>{t('account.sex')}: </span>
               <span className={scss['text-info']}> чоловіча</span>
             </p>
           </li>
           <li className={scss['info-item']}>
             <p>
-              <span className={scss['text']}>Дата народження: </span>
+              <span className={scss['text']}>{t('account.date-birth')}: </span>
               <span className={scss['text-info']}> 10. 02. 1998</span>
             </p>
           </li>
           <li className={scss['info-item']}>
             <p>
-              <span className={scss['text']}>Мобільний телефон: </span>
+              <span className={scss['text']}>{t('account.phone')}: </span>
               <span className={scss['text-info']}> +38(097)346-72-50</span>
             </p>
           </li>
           <li className={scss['info-item']}>
             <p>
-              <span className={scss['text']}>Ел. пошта: </span>
+              <span className={scss['text']}>{t('account.email')}: </span>
               <span className={scss['text-info']}> petrov@gmail.com</span>
             </p>
           </li>
         </ul>
       </div>
-      <button className={scss['exit-btn']}>Вийти</button>
+      <button className={scss['exit-btn']}>{t('account.exit-btn')}</button>
     </div>
   );
 };
