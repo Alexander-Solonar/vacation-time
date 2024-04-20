@@ -3,7 +3,7 @@
   margin-bottom: 70px;
   border-collapse: collapse;
   border-spacing: 5px;
-  border-bottom: 3px solid rgb(143, 152, 185);
+  border-bottom: 3px solid #8f98b9;
 }
 
 th,
@@ -18,7 +18,7 @@ td {
   font-size: 28px;
   line-height: 1, 28;
   text-align: left;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   background-color: #4c536b;
 }
 
@@ -35,15 +35,15 @@ td {
 .thead-column-type,
 .tbody-column-type {
   width: 56.6%;
-  border-right: 3px solid rgb(143, 152, 185);
-  border-left: 3px solid rgb(143, 152, 185);
+  border-right: 3px solid #8f98b9;
+  border-left: 3px solid #8f98b9;
 }
 
 .tbody-column-type {
   font-style: italic;
   font-size: 28px;
   line-height: 1.28;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .tbody-column-type-content {
@@ -72,4 +72,16 @@ td {
   border: none;
   color: #ffffff;
   background-color: #687bc0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #4c62bb;
+  }
+}
+
+.input {
+  height: 50px;
+  width: 40px;
+  font-size: 32px;
 }

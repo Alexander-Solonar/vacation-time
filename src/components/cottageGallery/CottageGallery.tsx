@@ -2,17 +2,17 @@ import firstImg from '../../assets/images/image 8.png';
 import secondImg from '../../assets/images/image 11.png';
 import thirdImg from '../../assets/images/image 9.png';
 import fourthImg from '../../assets/images/image 10.png';
-import scss from './CottageDisplay.module.scss';
+import './CottageGallery.scss';
 
-const CottageDisplay = () => {
+const CottageGallery = () => {
   return (
-    <div className={scss['section-gallery']}>
-      <div className={scss['image-container']}>
+    <div className="cottage-booking__gallery">
+      <div className="cottage-booking__images-left">
         <img src={firstImg} alt="house" width={507} />
         <img src={secondImg} alt="house" width={507} />
       </div>
-      <div className={scss['content-block']}>
-        <p className={scss['text-block']}>
+      <div className="cottage-booking__description">
+        <p className="cottage-booking__text">
           Затишні дерев’яні будиночки, які заховались на окраїні лісу,
           зустрічатимуть Вас чудовим краєвидом на ранкові полонини. <br />{' '}
           <br /> Ви можете обрати кількість кімнат та місце, яке буде ідеальним
@@ -20,7 +20,7 @@ const CottageDisplay = () => {
           великих компаній, яким потрібно бути поряд у декількох будинках, так і
           для пар, які хочуть бути на одинці.
         </p>
-        <div className={scss['inner-image-container']}>
+        <div className="cottage-booking__images-bottom">
           <img src={thirdImg} alt="house" width={355} />
           <img src={fourthImg} alt="house" width={355} />
         </div>
@@ -29,4 +29,4 @@ const CottageDisplay = () => {
   );
 };
 
-export default CottageDisplay;
+export default CottageGallery;

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Context } from '../../context/Context';
 import clsx from 'clsx';
 import icons from '../../assets/images/icons.svg';
-import scss from './BurgerButton.module.scss';
+import './BurgerButton.scss';
 
 const BurgerButton = () => {
   const { isOpenMobMenu, setIsOpenMobMenu } = useContext(Context);
@@ -14,7 +14,7 @@ const BurgerButton = () => {
   return (
     <>
       {!isOpenMobMenu && (
-        <button className={scss['burger']}>
+        <button className="burger-btn">
           <svg width="58" height="58" onClick={handleClick}>
             <use href={`${icons}#burger-close`} />
           </svg>
@@ -23,7 +23,7 @@ const BurgerButton = () => {
 
       {isOpenMobMenu && (
         <button
-          className={clsx(scss['burger'], isOpenMobMenu && scss['open-menu'])}
+          className={clsx(['burger-btn'], isOpenMobMenu && ['burger-btn-open'])}
         >
           <svg width="58" height="58" onClick={handleClick}>
             <use href={`${icons}#burger-open`} />
