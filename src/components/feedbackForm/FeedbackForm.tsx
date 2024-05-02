@@ -10,9 +10,9 @@ Notiflix.Report.init({
   svgSize: '60px',
   messageFontSize: '16px',
   success: {
-    svgColor: 'var(--primary-green-color)',
-    buttonBackground: 'var(--secondary-color)',
-    backOverlayColor: 'var(--fourth-color)',
+    svgColor: '#008000',
+    buttonBackground: '#2e3963',
+    backOverlayColor: '#552db133',
   },
 });
 

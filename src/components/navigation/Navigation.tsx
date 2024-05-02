@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import scss from './Navigation.module.scss';
 import { clsx } from 'clsx';
 
@@ -9,6 +9,7 @@ interface Active {
 
 const Navigation = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   const linkClassName = ({ isActive }: Active) => {
     const className = clsx(scss.link, { [scss.active]: isActive });
@@ -43,7 +44,11 @@ const Navigation = () => {
         </li>
         <li className={scss.line}></li>
         <li className={scss.item}>
-          <NavLink className={linkClassName} to="/account">
+          <NavLink
+            className={linkClassName}
+            to="/account"
+            state={{ from: location }}
+          >
             {t('header.account')}
           </NavLink>
         </li>
