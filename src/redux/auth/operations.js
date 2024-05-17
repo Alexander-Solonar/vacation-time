@@ -9,6 +9,14 @@ import { doc, setDoc } from 'firebase/firestore';
 export const register = createAsyncThunk(
   'auth/register',
   async ({ email, password, name }, thunkAPI) => {
+    const userData = {
+      name: name,
+      gender: '',
+      age: '',
+      phone: '',
+      email: email,
+    };
+
     try {
       const { user } = await createUserWithEmailAndPassword(
         auth,
@@ -16,7 +24,8 @@ export const register = createAsyncThunk(
         password
       );
       const docRef = doc(db, 'users', user.uid);
-      await setDoc(docRef, { name, email });
+      await setDoc(docRef, userData);
+
       const data = {
         email: user.email,
         token: user.accessToken,
@@ -24,7 +33,6 @@ export const register = createAsyncThunk(
       };
       return data;
     } catch (error) {
-      console.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -44,7 +52,6 @@ export const login = createAsyncThunk(
 
       return data;
     } catch (error) {
-      console.error(error.message);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -54,7 +61,6 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await auth.signOut();
   } catch (error) {
-    console.error(error.message);
     return thunkAPI.rejectWithValue(error.message);
   }
 });

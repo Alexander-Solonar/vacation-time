@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchUserData } from './operations';
+import { editProfile, fetchUserData } from './operations';
 
 const initialState = {
   items: [],
@@ -21,6 +21,12 @@ const handleFulfilledFetch = (state, action) => {
   state.items = action.payload || [];
 };
 
+const handleFulfilledEditProfile = (state, action) => {
+  state.isLoading = true;
+  state.error = null;
+  state.items = action.payload;
+};
+
 const userDataSlice = createSlice({
   name: 'userData',
   initialState,
@@ -28,7 +34,10 @@ const userDataSlice = createSlice({
     builder
       .addCase(fetchUserData.pending, handlePending)
       .addCase(fetchUserData.fulfilled, handleFulfilledFetch)
-      .addCase(fetchUserData.rejected, handleRejected);
+      .addCase(fetchUserData.rejected, handleRejected)
+      .addCase(editProfile.pending, handlePending)
+      .addCase(editProfile.fulfilled, handleFulfilledEditProfile)
+      .addCase(editProfile.rejected, handleRejected);
   },
 });
 

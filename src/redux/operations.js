@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { db } from '../config';
 
 export const fetchUserData = createAsyncThunk(
@@ -13,6 +13,19 @@ export const fetchUserData = createAsyncThunk(
 
         return posts;
       }
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
+export const editProfile = createAsyncThunk(
+  'userData/editProfile',
+  async ({ uid, values }, thunkAPI) => {
+    try {
+      const ref = doc(db, 'users', uid);
+      await updateDoc(ref, values);
+      return values;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }

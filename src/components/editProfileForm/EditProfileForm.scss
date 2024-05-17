@@ -1,0 +1,38 @@
+.edit-form-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 60px 40px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.edit-form-input {
+  width: 300px;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 20px;
+  line-height: 1.37;
+  color: #323236;
+  border: 2px solid #90a4ae;
+  outline: none;
+  background-color: #ffffff;
+  &::placeholder {
+    color: #90a4ae;
+  }
+}

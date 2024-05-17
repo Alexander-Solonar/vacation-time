@@ -1,8 +1,9 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
 import './RegisterForm.scss';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import FormikControl from '../formik/FormikControl';
 
 const schema = object({
   name: string().trim().required('Name is a required field'),
@@ -20,11 +21,7 @@ const RegisterForm = () => {
   };
 
   const handleSubmit = async (values, actions) => {
-    try {
-      dispatch(register(values));
-    } catch (error) {
-      console.error(error);
-    }
+    dispatch(register(values));
 
     actions.resetForm();
   };
@@ -37,37 +34,31 @@ const RegisterForm = () => {
     >
       <Form className="registration-form">
         <h1 className="registration-form__title">User registration</h1>
-        <label className="registration-form__label">
-          Name
-          <Field
-            className="registration-form__input"
-            type="text"
-            name="name"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            placeholder="Enter your name"
-          />
-          <ErrorMessage name="name" component="p" className="error" />
-        </label>
-        <label className="registration-form__label">
-          Email
-          <Field
-            className="registration-form__input"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-          />
-          <ErrorMessage name="email" component="p" className="error" />
-        </label>
-        <label className="registration-form__label">
-          Password
-          <Field
-            className="registration-form__input"
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-          />
-          <ErrorMessage name="password" component="p" className="error" />
-        </label>
+        <FormikControl
+          className="login-form__input"
+          control="input"
+          type="text"
+          label="Name"
+          name="name"
+          placeholder="Enter your name"
+        />
+
+        <FormikControl
+          className="login-form__input"
+          control="input"
+          type="email"
+          label="Email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <FormikControl
+          className="login-form__input"
+          control="input"
+          type="password"
+          label="Password"
+          name="password"
+          placeholder="Enter your password"
+        />
         <button className="registration-form__button" type="submit">
           Register
         </button>
@@ -77,6 +68,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-
-// await updateUserProfile({ displayName: values.name });
-// writeDataToFirestore(user.uid, values.name, values.email);

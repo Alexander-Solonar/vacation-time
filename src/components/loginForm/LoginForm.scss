@@ -14,17 +14,10 @@
   row-gap: 15px;
 }
 
-.login-form__label {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-size: 26px;
-}
-
 .login-form__input {
   width: 300px;
   height: 50px;
-  padding: 18px 28px;
+  padding: 0 15px;
   font-size: 20px;
   line-height: 1.37;
   color: #323236;

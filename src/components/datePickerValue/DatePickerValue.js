@@ -5,8 +5,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './DatePickerValue.scss';
 
 const DatePickerValue = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
   const [rooms, setRooms] = useState(1);
   const [adults, setAdults] = useState(0);
   const [kids, setKids] = useState(0);
@@ -35,7 +35,7 @@ const DatePickerValue = () => {
                       <use href={`${icons}#icon-calendar`} />
                     </svg>
                   }
-                  onChange={date => setStartDate(date as Date)}
+                  onChange={date => setStartDate(date)}
                 />
                 <svg className="date-picker__input-icon" width="32" height="32">
                   <use href={`${icons}#icon-arrow-down`} />
@@ -59,7 +59,7 @@ const DatePickerValue = () => {
                       <use href={`${icons}#icon-calendar`} />
                     </svg>
                   }
-                  onChange={date => setEndDate(date as Date)}
+                  onChange={date => setEndDate(date)}
                 />
                 <svg className="date-picker__input-icon" width="32" height="32">
                   <use href={`${icons}#icon-arrow-down`} />
