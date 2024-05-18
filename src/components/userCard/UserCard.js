@@ -48,7 +48,7 @@ const UserCard = () => {
               <li className="info-item">
                 <p>
                   <span className="text">{t('account.sex')}: </span>
-                  <span className="text-info"> {items.sex}</span>
+                  <span className="text-info"> {items.gender}</span>
                 </p>
               </li>
               <li className="info-item">

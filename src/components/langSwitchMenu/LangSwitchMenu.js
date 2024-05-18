@@ -8,7 +8,7 @@ const LangSwitchMenu = () => {
   const { i18n } = useTranslation();
   const arrLanguages = i18n.languages;
 
-  const changeLanguage = (lng: string) => {
+  const changeLanguage = lng => {
     i18n.changeLanguage(lng.toLocaleLowerCase());
     setIsOpenMenuLang(false);
   };
@@ -19,9 +19,7 @@ const LangSwitchMenu = () => {
         <li key={index} className={scss.item}>
           <button
             className={scss['lang-btn']}
-            onClick={e =>
-              changeLanguage((e.target as HTMLButtonElement).innerText)
-            }
+            onClick={e => changeLanguage(e.target.innerText)}
           >
             {lang}
           </button>

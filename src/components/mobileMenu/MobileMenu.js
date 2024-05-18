@@ -1,4 +1,4 @@
-import { MouseEvent, useContext } from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
@@ -6,19 +6,15 @@ import clsx from 'clsx';
 
 import scss from './MobileMenu.module.scss';
 
-interface Active {
-  isActive: boolean;
-}
-
 const MobileMenu = () => {
   const { t } = useTranslation();
   const { isOpenMobMenu, setIsOpenMobMenu } = useContext(Context);
 
-  const handleClickCloseMenu = (e: MouseEvent<HTMLDivElement>) => {
-    if ((e.target as HTMLElement).nodeName === 'A') setIsOpenMobMenu(false);
+  const handleClickCloseMenu = e => {
+    if (e.target.nodeName === 'A') setIsOpenMobMenu(false);
   };
 
-  const linkClassName = ({ isActive }: Active) => {
+  const linkClassName = ({ isActive }) => {
     const className = clsx(scss['mob-menu-link'], { [scss.active]: isActive });
     return className;
   };
