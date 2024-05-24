@@ -1,17 +1,17 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import bakota from '../../assets/images/bakota.webp';
 import icons from '../../assets/images/icons.svg';
-import scss from './HousesList.module.scss';
-import { useState } from 'react';
+import styles from './HousesList.module.scss';
 
 const houses = [1, 2, 3, 4, 5];
 
 const HousesList = () => {
   const [isStarClicked, setIsStarClicked] = useState(false);
 
-  const SvgClassName = clsx(scss['icon-star'], {
-    [scss['clicked']]: isStarClicked,
+  const SvgClassName = clsx(styles.iconStar, {
+    [styles.clicked]: isStarClicked,
   });
 
   const handleFavoriteIcon = () => {
@@ -19,23 +19,20 @@ const HousesList = () => {
   };
 
   return (
-    <ul className={scss['house-list']}>
+    <ul>
       {houses.map(e => (
-        <li key={e} className={scss['house-item']}>
+        <li key={e} className={styles.item}>
           <img src={bakota} width={485} alt="bakota" />
-          <div className={scss['description-block']}>
-            <h2 className={scss['house-title']}>Незвідана Бакота</h2>
-            <p className={scss['house-text']}>
+          <div className={styles.description}>
+            <h2 className={styles.title}>Незвідана Бакота</h2>
+            <p className={styles.text}>
               У Хмельницькій області розташований загублений край - Бакота.
               Мальовничий каньйон з давньою історією захоплює своїми просторами
               та незвичною атмосферою. Бджільництво, свіжий мед із польових
               трав, дотик до природи.
             </p>
           </div>
-          <Link
-            className={scss['more-details-button']}
-            to={`/reserve/house-${e}`}
-          >
+          <Link className={styles.detailsButton} to={`/reserve/house-${e}`}>
             Детальніше
           </Link>
           <svg

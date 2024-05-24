@@ -1,63 +1,46 @@
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
 import clsx from 'clsx';
 
-import scss from './MobileMenu.module.scss';
+import styles from './MobileMenu.module.scss';
 
 const MobileMenu = () => {
   const { t } = useTranslation();
+  const location = useLocation();
   const { isOpenMobMenu, setIsOpenMobMenu } = useContext(Context);
 
+  const links = [
+    { path: '/', label: 'header.home' },
+    { path: '/about-us', label: 'header.about-us' },
+    { path: '/reserve', label: 'header.reserve' },
+    { path: '/contacts', label: 'header.contacts' },
+    { path: '/account', label: 'header.account', state: { from: location } },
+  ];
+
   const handleClickCloseMenu = e => {
-    if (e.target.nodeName === 'A') setIsOpenMobMenu(false);
+    if (e.target.nodeName === 'A' || e.target.nodeName === 'DIV')
+      setIsOpenMobMenu(false);
   };
 
-  const linkClassName = ({ isActive }) => {
-    const className = clsx(scss['mob-menu-link'], { [scss.active]: isActive });
-    return className;
-  };
+  const linkClassName = ({ isActive }) =>
+    clsx(styles.link, { [styles.active]: isActive });
 
   return (
     <div
-      className={clsx(
-        scss['mob-menu'],
-        isOpenMobMenu && scss['mob-menu-is-open']
-      )}
+      className={clsx(styles.wrapper, isOpenMobMenu && styles.menuIsOpen)}
       onClick={handleClickCloseMenu}
     >
-      <nav className={scss['mob-menu-nav']}>
-        <ul className={scss['mob-menu-list']}>
-          <li className={scss['mob-menu-item']}>
-            <NavLink className={linkClassName} to="/">
-              {t('header.home')}
-            </NavLink>
-          </li>
-
-          <li className={scss['mob-menu-item']}>
-            <NavLink className={linkClassName} to="/about-us">
-              {t('header.about-us')}
-            </NavLink>
-          </li>
-
-          <li className={scss['mob-menu-item']}>
-            <NavLink className={linkClassName} to="/reserve">
-              {t('header.reserve')}
-            </NavLink>
-          </li>
-
-          <li className={scss['mob-menu-item']}>
-            <NavLink className={linkClassName} to="/contacts">
-              {t('header.contacts')}
-            </NavLink>
-          </li>
-
-          <li className={scss['mob-menu-item']}>
-            <NavLink className={linkClassName} to="/account">
-              {t('header.account')}
-            </NavLink>
-          </li>
+      <nav className={styles.nav}>
+        <ul className={styles.list}>
+          {links.map(({ path, label, state }) => (
+            <li key={path} className={styles.item}>
+              <NavLink className={linkClassName} to={path} state={state}>
+                {t(label)}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

@@ -15,7 +15,7 @@
   background-color: #f2eeee;
 }
 
-.formTitle {
+.title {
   margin-bottom: 30px;
   color: #414141;
   font-size: 32px;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-.blockInpit {
+.blockInput {
   display: flex;
   flex-direction: column;
   max-width: 408px;
@@ -65,12 +65,4 @@
   &:focus {
     background-color: #2e3963;
   }
-}
-
-.error {
-  position: absolute;
-  color: #ff0000;
-  bottom: -18px;
-  font-size: 14px;
-  font-weight: 400;
 }

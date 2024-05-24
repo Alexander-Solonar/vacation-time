@@ -1,6 +1,9 @@
-.box-title {
+$title-container-background: #c6c6dc;
+$title-color: #202846;
+
+.titleContainer {
   margin-bottom: 23px;
-  background: #c6c6dc;
+  background: $title-container-background;
 }
 
 .title {
@@ -14,7 +17,7 @@
   font-weight: 400;
   line-height: 1.45;
   font-style: italic;
-  color: #202846;
+  color: $title-color;
 
   @media screen and (max-width: 767px) {
     padding-left: 50px;

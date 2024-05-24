@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
 import LangSwitchMenu from '../langSwitchMenu';
 import icons from '../../assets/images/icons.svg';
-import scss from './LangSwitchButton.module.scss';
+import styles from './LangSwitchButton.module.scss';
 
 const LangSwitchButton = () => {
   const { isOpenMenuLang, setIsOpenMenuLang } = useContext(Context);
@@ -14,12 +14,12 @@ const LangSwitchButton = () => {
   };
 
   return (
-    <div className={scss['block-lang-btn']}>
-      <button className={scss['lang-btn']} onClick={handleClick}>
-        <svg className={scss['lang-icon']} width={50} height={50}>
+    <div className={styles.container}>
+      <button className={styles.button} onClick={handleClick}>
+        <svg className={styles.icon} width={50} height={50}>
           <use href={`${icons}#lang`}></use>
         </svg>
-        <span className={scss['btn-text']}>{i18n.resolvedLanguage}</span>
+        <span className={styles.language}>{i18n.resolvedLanguage}</span>
       </button>
       {isOpenMenuLang && <LangSwitchMenu />}
     </div>

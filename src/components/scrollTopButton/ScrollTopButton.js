@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
 import icons from '../../assets/images/icons.svg';
-import scss from './ScrollTopButton.module.scss';
+import styles from './ScrollTopButton.module.scss';
 
 const ScrollTopButton = () => {
   const [isShowButton, setIsShowButton] = useState(false);
@@ -36,8 +36,8 @@ const ScrollTopButton = () => {
   return (
     <>
       {isShowButton && (
-        <button className={scss.button} onClick={handleScrollTo}>
-          <svg className={scss.icon} width={23} height={43}>
+        <button className={styles.button} onClick={handleScrollTo}>
+          <svg className={styles.icon} width={23} height={43}>
             <use href={`${icons}#arrow-top`}></use>
           </svg>
         </button>

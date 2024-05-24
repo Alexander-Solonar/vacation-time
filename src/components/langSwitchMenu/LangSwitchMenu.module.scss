@@ -1,3 +1,7 @@
+$hover-color: #64b2da;
+$white-color: #ffffff;
+$list-bg-color: #202846;
+
 .list {
   position: absolute;
   display: flex;
@@ -7,7 +11,7 @@
   top: 50px;
   right: -9.5px;
   width: 47px;
-  background-color: #202846;
+  background-color: $list-bg-color;
 }
 .item {
   width: 100%;
@@ -17,11 +21,11 @@
 
   &:hover,
   &:focus {
-    background-color: #64b2da;
+    background-color: $hover-color;
   }
 }
 
-.lang-btn {
+.button {
   width: 100%;
   font-weight: 700;
   font-size: 24px;
@@ -29,6 +33,6 @@
   text-transform: uppercase;
   cursor: pointer;
   border: 0;
-  color: #ffffff;
+  color: $white-color;
   background-color: transparent;
 }

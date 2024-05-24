@@ -1,6 +1,6 @@
 import ReactSelect from 'react-select';
 import { useTranslation } from 'react-i18next';
-import './Filter.scss';
+import styles from './Filter.module.scss';
 
 const Filter = () => {
   const { t } = useTranslation();
@@ -57,7 +57,7 @@ const Filter = () => {
 
   return (
     <ReactSelect
-      className="select"
+      className={styles.select}
       placeholder={t('filter.title')}
       components={{ IndicatorSeparator, IndicatorsContainer }}
       options={filterButtons}

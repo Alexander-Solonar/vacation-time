@@ -1,4 +1,10 @@
-.user-card {
+$avatar-background-color: #bdbdc6;
+$label-value-color: #353c57;
+$button-default-background: #484a54;
+$button-hover-background: #69749b;
+$logout-button-background: #202846;
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,15 +12,14 @@
   margin: 0 auto 40px;
 }
 
-.info-block {
+.infoContainer {
   display: flex;
-  // justify-content: space-between;
   column-gap: 30px;
   row-gap: 50px;
   width: 100%;
   padding: 70px 75px 40px 115px;
   margin-bottom: 40px;
-  background-color: #bdbdc6;
+  background-color: $avatar-background-color;
 
   @media screen and (max-width: 1023px) {
     padding: 70px 45px 40px 45px;
@@ -26,17 +31,17 @@
   }
 }
 
-.user-avatar {
+.avatarImage {
   margin-bottom: 30px;
 }
 
-.buttons-block {
+.buttonsContainer {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 
-.info-list {
+.list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,7 +49,7 @@
   row-gap: 20px;
 }
 
-.info-item {
+.item {
   &:not(:last-child) {
     border-bottom: 3px solid #ffffff;
   }
@@ -54,34 +59,25 @@
   }
 }
 
-.text {
+.label,
+.value {
   font-size: 32px;
+  font-style: italic;
+  line-height: 1.3;
+  text-align: left;
+  color: $label-value-color;
+
+  @media screen and (max-width: 923px) {
+    font-size: 26px;
+  }
+}
+
+.label {
   font-weight: 700;
-  font-style: italic;
-  line-height: 1.3;
-  text-align: left;
-  color: #353c57;
-
-  @media screen and (max-width: 923px) {
-    font-size: 26px;
-  }
 }
 
-.text-info {
-  font-size: 32px;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.3;
-  text-align: left;
-  color: #353c57;
-
-  @media screen and (max-width: 923px) {
-    font-size: 26px;
-  }
-}
-
-.change-avatar-btn,
-.setting-btn {
+.changeAvatarButton,
+.settingButton {
   padding: 8px 45px;
   font-size: 20px;
   line-height: 1.29;
@@ -93,21 +89,21 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.change-avatar-btn {
-  background-color: #69749b;
+.changeAvatarButton {
+  background-color: $button-default-background;
   &:hover {
-    background-color: #484a54;
+    background-color: $button-hover-background;
   }
 }
 
-.setting-btn {
-  background-color: #484a54;
+.settingButton {
+  background-color: $button-default-background;
   &:hover {
-    background-color: #69749b;
+    background-color: $button-hover-background;
   }
 }
 
-.exit-btn {
+.logoutButton {
   padding: 8px 40px;
   font-size: 23px;
   line-height: 1.29;
@@ -116,7 +112,7 @@
   cursor: pointer;
   border: none;
   border-radius: 30px;
-  background-color: #202846;
+  background-color: $logout-button-background;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {

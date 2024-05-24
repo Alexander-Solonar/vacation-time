@@ -1,4 +1,7 @@
-.burger-btn {
+$active-color: #64b2da;
+$white-color: #ffffff;
+
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,19 +9,19 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  fill: #ffffff;
+  fill: $white-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    fill: #64b2da;
+    fill: $active-color;
   }
 
   @media screen and (min-width: 1024px) {
     display: none;
   }
-}
 
-.burger-btn-open {
-  fill: #64b2da;
+  &.isOpen {
+    fill: $active-color;
+  }
 }

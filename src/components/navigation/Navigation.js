@@ -1,58 +1,34 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
-import scss from './Navigation.module.scss';
 import { clsx } from 'clsx';
-
-interface Active {
-  isActive: boolean;
-}
+import styles from './Navigation.module.scss';
 
 const Navigation = () => {
   const { t } = useTranslation();
   const location = useLocation();
 
-  const linkClassName = ({ isActive }: Active) => {
-    const className = clsx(scss.link, { [scss.active]: isActive });
-    return className;
-  };
+  const links = [
+    { path: '/', label: 'header.home' },
+    { path: '/about-us', label: 'header.about-us' },
+    { path: '/reserve', label: 'header.reserve' },
+    { path: '/contacts', label: 'header.contacts' },
+    { path: '/account', label: 'header.account', state: { from: location } },
+  ];
+
+  const linkClassName = ({ isActive }) =>
+    clsx(styles.link, { [styles.active]: isActive });
 
   return (
-    <nav className={scss.nav}>
-      <ul className={scss.list}>
-        <li className={scss.item}>
-          <NavLink className={linkClassName} to="/">
-            {t('header.home')}
-          </NavLink>
-        </li>
-        <li className={scss.line}></li>
-        <li className={scss.item}>
-          <NavLink className={linkClassName} to="/about-us">
-            {t('header.about-us')}
-          </NavLink>
-        </li>
-        <li className={scss.line}></li>
-        <li className={scss.item}>
-          <NavLink className={linkClassName} to="/reserve">
-            {t('header.reserve')}
-          </NavLink>
-        </li>
-        <li className={scss.line}></li>
-        <li className={scss.item}>
-          <NavLink className={linkClassName} to="/contacts">
-            {t('header.contacts')}
-          </NavLink>
-        </li>
-        <li className={scss.line}></li>
-        <li className={scss.item}>
-          <NavLink
-            className={linkClassName}
-            to="/account"
-            state={{ from: location }}
-          >
-            {t('header.account')}
-          </NavLink>
-        </li>
-        <li className={scss.line}></li>
+    <nav className={styles.nav}>
+      <ul className={styles.list}>
+        {links.map(({ path, label, state }) => (
+          <li key={path} className={styles.item}>
+            <NavLink className={linkClassName} to={path} state={state}>
+              {t(label)}
+            </NavLink>
+            <div className={styles.line}></div>
+          </li>
+        ))}
       </ul>
     </nav>
   );

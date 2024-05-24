@@ -1,10 +1,9 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import PageTitle from '../../components/pageTitle';
 import UserCard from '../../components/userCard';
 import Backdrop from '../../components/backdrop';
-import { useDispatch, useSelector } from 'react-redux';
-import './PageAccount.scss';
-import { useEffect } from 'react';
 import { fetchUserData } from '../../redux/operations';
 import Loader from '../../components/loader';
 
@@ -19,7 +18,7 @@ const PageAccount = () => {
   }, [dispatch, uid]);
 
   return (
-    <div className="page-account">
+    <div>
       <PageTitle name={t('account.title')} />
       <div className="container">
         {token ? <UserCard /> : <Backdrop />}

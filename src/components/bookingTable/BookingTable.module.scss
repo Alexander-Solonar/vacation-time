@@ -1,0 +1,80 @@
+$table-border-color: #8f98b9;
+$table-header-bg: #4c536b;
+$table-body-bg: #cfcfd1;
+$button-bg: #687bc0;
+$button-hover-bg: #4c62bb;
+$white-color: #ffffff;
+$text-color-body: #000000;
+$font-size: 28px;
+$line-height: 1.28;
+
+.table {
+  width: 100%;
+  margin-bottom: 70px;
+  border-collapse: collapse;
+  border-spacing: 5px;
+  border-bottom: 3px solid $table-border-color;
+}
+
+.tableHeader {
+  height: 70px;
+  font-style: italic;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: left;
+  color: $white-color;
+  background-color: $table-header-bg;
+}
+
+.cellCapacity,
+.cellType,
+.cellPrice {
+  font-weight: 400;
+  padding: 0 45px;
+}
+
+.cellType {
+  width: 56.6%;
+  border-left: 3px solid $table-border-color;
+  border-right: 3px solid $table-border-color;
+}
+
+.tableBody {
+  height: 200px;
+  text-align: left;
+  background-color: $table-body-bg;
+}
+
+.iconList {
+  display: flex;
+  justify-content: center;
+}
+
+.roomInfo {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 15px;
+}
+
+.roomDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceButton {
+  padding: 10px 30px;
+  font-style: italic;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  color: $white-color;
+  background-color: $button-bg;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-bg;
+  }
+}

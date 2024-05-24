@@ -2,12 +2,11 @@ import { Suspense, useContext, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { throttle } from 'lodash';
-
 import Header from '../header';
 import Footer from '../footer';
-import scss from './Layout.module.scss';
 import ScrollTopButton from '../scrollTopButton';
 import MobileMenu from '../mobileMenu';
+import styles from './Layout.module.scss';
 
 const Layout = () => {
   const { setIsOpenMobMenu } = useContext(Context);
@@ -26,9 +25,9 @@ const Layout = () => {
   }, [setIsOpenMobMenu]);
 
   return (
-    <div className={scss.wrapper}>
+    <div className={styles.wrapper}>
       <Header />
-      <main className={scss.main}>
+      <main className={styles.main}>
         <Suspense fallback="Loader...">
           <Outlet />
         </Suspense>

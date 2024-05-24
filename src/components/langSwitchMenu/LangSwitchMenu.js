@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
-import scss from './LangSwitchMenu.module.scss';
+import styles from './LangSwitchMenu.module.scss';
 
 const LangSwitchMenu = () => {
   const { setIsOpenMenuLang } = useContext(Context);
@@ -14,11 +14,11 @@ const LangSwitchMenu = () => {
   };
 
   return (
-    <ul className={scss.list}>
+    <ul className={styles.list}>
       {arrLanguages.map((lang, index) => (
-        <li key={index} className={scss.item}>
+        <li key={index} className={styles.item}>
           <button
-            className={scss['lang-btn']}
+            className={styles.button}
             onClick={e => changeLanguage(e.target.innerText)}
           >
             {lang}

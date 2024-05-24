@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { editProfile } from '../../redux/operations';
 import 'react-datepicker/dist/react-datepicker.css';
 import FormikControl from '../formik/FormikControl';
-import './EditProfileForm.scss';
 import { format, parse } from 'date-fns';
+import styles from './EditProfileForm.module.scss';
 
 const schema = object({
   name: string().trim().required('This is a required field'),
@@ -35,8 +35,8 @@ const EditProfileForm = ({ items, closeForm }) => {
   };
 
   return (
-    <div className="edit-form-wrapper">
-      <button className="close-button" onClick={() => closeForm(false)}>
+    <div className={styles.wrapper}>
+      <button className={styles.closeButton} onClick={() => closeForm(false)}>
         Close
       </button>
       <Formik
@@ -45,37 +45,37 @@ const EditProfileForm = ({ items, closeForm }) => {
         onSubmit={handleSubmit}
       >
         {() => (
-          <Form className="edit-form">
+          <Form className={styles.form}>
             <FormikControl
-              className="edit-form-input"
+              className={styles.input}
               control="input"
               type="text"
               label="Name"
               name="name"
             />
             <FormikControl
-              className="edit-form-input"
+              className={styles.input}
               control="select"
               label="Gender"
               name="gender"
             />
 
             <FormikControl
-              className="edit-form-input"
+              className={styles.input}
               control="date"
               label="Age"
               name="age"
             />
 
             <FormikControl
-              className="edit-form-input"
+              className={styles.input}
               control="input"
               type="text"
               label="Phone"
               name="phone"
             />
             <FormikControl
-              className="edit-form-input"
+              className={styles.input}
               control="input"
               type="email"
               label="Email"

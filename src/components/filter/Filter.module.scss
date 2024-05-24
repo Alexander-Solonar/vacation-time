@@ -1,10 +1,13 @@
+$select-text-color: #292a31;
+$indicator-color: #000000;
+
 .select {
   margin-bottom: 23px;
   font-family: 'PT Sans';
   font-size: 28px;
   line-height: 1.28;
   text-align: center;
-  color: #292a31;
+  color: $select-text-color;
 }
 
 .indicatorsContainer {
@@ -19,5 +22,5 @@
   top: 20px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 16px solid #000000;
+  border-top: 16px solid $indicator-color;
 }

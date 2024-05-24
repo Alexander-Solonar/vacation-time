@@ -1,0 +1,17 @@
+.control {
+  position: relative;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+}
+
+.error {
+  position: absolute;
+  color: #ff0000;
+  bottom: -18px;
+  font-size: 12px;
+  font-weight: 400;
+}

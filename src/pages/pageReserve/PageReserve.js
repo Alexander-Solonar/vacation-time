@@ -1,11 +1,10 @@
 import Filter from '../../components/filter';
 import HousesList from '../../components/housesList';
 import PageTitle from '../../components/pageTitle';
-import scss from './PageReserve.module.scss';
 
 const PageReserve = () => {
   return (
-    <div className={scss['page-reserve']}>
+    <div>
       <PageTitle name="Забронювати будиночок" />
       <div className="container">
         <Filter />

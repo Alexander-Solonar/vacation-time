@@ -1,3 +1,7 @@
+$button-background-color: #5557689e;
+$button-hover-background-color: #2e3963;
+$button-fill-color: #ffffff;
+
 .button {
   position: fixed;
   right: 40px;
@@ -7,16 +11,16 @@
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  background-color: #5557689e;
+  background-color: $button-background-color;
   opacity: 0.5;
-  fill: #ffffff;
+  fill: $button-fill-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     opacity: 1;
-    background-color: #2e3963;
+    background-color: $button-hover-background-color;
   }
 
   @media screen and (max-width: 768px) {

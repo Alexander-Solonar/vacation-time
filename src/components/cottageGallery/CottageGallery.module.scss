@@ -1,4 +1,4 @@
-.cottage-booking__gallery {
+.wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   margin-bottom: 23px;
 }
 
-.cottage-booking__images-left {
+.blockLargeImage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,14 +19,14 @@
   }
 }
 
-.cottage-booking__description {
+.description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 8px;
 }
 
-.cottage-booking__text {
+.text {
   max-width: 718px;
   padding: 10px 70px;
   font-size: 24px;
@@ -39,7 +39,7 @@
   }
 }
 
-.cottage-booking__images-bottom {
+.blockSmallImage {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

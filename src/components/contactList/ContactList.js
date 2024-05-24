@@ -1,36 +1,36 @@
 import { useTranslation } from 'react-i18next';
 import Map from '../map';
-import './ContactList.scss';
+import styles from './ContactList.module.scss';
 
 const ContactList = () => {
   const { t } = useTranslation();
 
   return (
-    <ul className="contacts">
+    <ul className={styles.list}>
       <li>
-        <p className="contacts__title">{t('contacts.phone')}</p>
-        <a className="contacts__text" href="tel:+380973332211">
+        <p className={styles.label}>{t('contacts.phone')}</p>
+        <a className={styles.text} href="tel:+380973332211">
           +38(097)333-22-11
         </a>
       </li>
       <li>
-        <p className="contacts__title">{t('contacts.schedule')}</p>
-        <p className="contacts__text">
+        <p className={styles.label}>{t('contacts.schedule')}</p>
+        <p className={styles.text}>
           {t('contacts.days.mon-fri')} 08:00-22:00 <br />
-          {t('contacts.days.sat')}09:00-21:00 <br />
+          {t('contacts.days.sat')} 09:00-21:00 <br />
           {t('contacts.days.sun')} 10:00-20:00
         </p>
       </li>
       <li>
-        <p className="contacts__title">{t('contacts.email')}</p>
-        <a className="contacts__text" href="mailto:hello@gmail.com">
+        <p className={styles.label}>{t('contacts.email')}</p>
+        <a className={styles.text} href="mailto:hello@gmail.com">
           hello@gmail.com
         </a>
       </li>
       <li>
-        <p className="contacts__title">{t('contacts.address-title')}</p>
+        <p className={styles.label}>{t('contacts.address-title')}</p>
         <a
-          className="contacts__text"
+          className={styles.text}
           href="https://maps.app.goo.gl/MhXZeUXeXauU3JdF9"
           target="_blank"
           rel="noopener noreferrer nofollow"

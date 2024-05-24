@@ -2,8 +2,8 @@ import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
 import { useTranslation } from 'react-i18next';
 import Notiflix from 'notiflix';
-import './FeedbackForm.scss';
 import FormikControl from '../formik/FormikControl';
+import styles from './FeedbackForm.module.scss';
 
 Notiflix.Report.init({
   width: '360px',
@@ -43,18 +43,18 @@ const FeedbackForm = () => {
   };
 
   return (
-    <section className="feedback-form">
+    <section>
       <div className="container">
         <Formik
           initialValues={initialValues}
           validationSchema={schema}
           onSubmit={handleSubmit}
         >
-          <Form className="form">
-            <h3 className="formTitle">{t('feedbackForm.title')}</h3>
-            <div className="blockInpit">
+          <Form className={styles.form}>
+            <h3 className={styles.title}>{t('feedbackForm.title')}</h3>
+            <div className={styles.blockInput}>
               <FormikControl
-                className="input"
+                className={styles.input}
                 control="input"
                 type="text"
                 label={t('feedbackForm.name')}
@@ -63,7 +63,7 @@ const FeedbackForm = () => {
               />
 
               <FormikControl
-                className="input"
+                className={styles.input}
                 control="input"
                 type="text"
                 label={t('feedbackForm.phone')}
@@ -71,7 +71,7 @@ const FeedbackForm = () => {
                 placeholder={t('feedbackForm.placeholderPhone')}
               />
             </div>
-            <button className="button" type="submit">
+            <button className={styles.button} type="submit">
               {t('feedbackForm.button')}
             </button>
           </Form>

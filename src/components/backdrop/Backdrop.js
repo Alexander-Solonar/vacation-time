@@ -2,27 +2,23 @@ import { useRef, useState } from 'react';
 import LoginForm from '../loginForm';
 import RegisterForm from '../registerForm';
 import { Link, useLocation } from 'react-router-dom';
-import './Backdrop.scss';
+import styles from './Backdrop.module.scss';
 
 const Backdrop = () => {
-  const [changeForm, setChangeForm] = useState(false);
+  const [isRegister, setIsRegister] = useState(false);
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
 
-  const textButton = changeForm ? 'Login' : 'Register';
+  const toggleForm = () => setIsRegister(prev => !prev);
+  const buttonText = isRegister ? 'Login' : 'Register';
 
   return (
-    <div className="backdrop">
-      <Link className="backLink" to={backLinkHref.current}></Link>
-      <div className="backdrop__content">
-        {changeForm && <RegisterForm />}
-        {!changeForm && <LoginForm />}
-
-        <button
-          className="change-form-btn"
-          onClick={() => setChangeForm(!changeForm)}
-        >
-          {textButton}
+    <div className={styles.backdrop}>
+      <Link className={styles.backLink} to={backLinkHref.current} />
+      <div className={styles.content}>
+        {isRegister ? <RegisterForm /> : <LoginForm />}
+        <button className={styles.toggleButton} onClick={toggleForm}>
+          {buttonText}
         </button>
       </div>
     </div>
