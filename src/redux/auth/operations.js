@@ -28,7 +28,6 @@ export const register = createAsyncThunk(
 
       const data = {
         email: user.email,
-        token: user.accessToken,
         uid: user.uid,
       };
       return data;
@@ -46,7 +45,6 @@ export const login = createAsyncThunk(
       const data = {
         displayName: user.displayName,
         email: user.email,
-        token: user.accessToken,
         uid: user.uid,
       };
 
