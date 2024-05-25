@@ -1,6 +1,6 @@
-import styles from './PageTitle.module.scss';
+import styles from './MainTitle.module.scss';
 
-const PageTitle = ({ name }) => {
+const MainTitle = ({ name }) => {
   return (
     <div className={styles.titleContainer}>
       <h1 className={styles.title}>{name}</h1>
@@ -8,4 +8,4 @@ const PageTitle = ({ name }) => {
   );
 };
 
-export default PageTitle;
+export default MainTitle;

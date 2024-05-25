@@ -1,11 +1,11 @@
 import Filter from '../../components/filter';
 import HousesList from '../../components/housesList';
-import PageTitle from '../../components/pageTitle';
+import MainTitle from '../../components/mainTitle';
 
 const PageReserve = () => {
   return (
     <div>
-      <PageTitle name="Забронювати будиночок" />
+      <MainTitle name="Забронювати будиночок" />
       <div className="container">
         <Filter />
         <HousesList />

@@ -28,7 +28,7 @@ const Layout = () => {
     <div className={styles.wrapper}>
       <Header />
       <main className={styles.main}>
-        <Suspense fallback="Loader...">
+        <Suspense>
           <Outlet />
         </Suspense>
       </main>

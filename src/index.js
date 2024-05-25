@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
 import App from './App';
 import './i18n';
 import './index.scss';
@@ -24,5 +23,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-reportWebVitals();
