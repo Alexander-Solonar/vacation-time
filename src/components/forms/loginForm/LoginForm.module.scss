@@ -6,6 +6,7 @@ $placeholder-color: #90a4ae;
 $button-text-color: #ffffff;
 $button-background-color: #202846;
 $button-hover-background-color: #2e3963;
+$error-color: #ff0000;
 
 .form {
   display: flex;
@@ -37,6 +38,10 @@ $button-hover-background-color: #2e3963;
   &::placeholder {
     color: $placeholder-color;
   }
+}
+
+.error {
+  color: $error-color;
 }
 
 .button {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import styles from './PageLogin.module.scss';
-import LoginForm from 'components/loginForm';
+import LoginForm from 'components/forms/loginForm';
 import Backdrop from 'components/backdrop';
+import styles from './PageLogin.module.scss';
 
 const PageLogin = () => {
   return (

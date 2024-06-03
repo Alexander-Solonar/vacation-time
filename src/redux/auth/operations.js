@@ -1,36 +1,36 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth';
-import { auth, db } from '../../config';
+import { auth, db } from '../../firebaseConfig';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { doc, setDoc } from 'firebase/firestore';
+
+const setUserDocument = async (user, userData) => {
+  const docRef = doc(db, 'users', user.uid);
+  await setDoc(docRef, userData);
+};
 
 export const register = createAsyncThunk(
   'auth/register',
   async ({ email, password, name }, thunkAPI) => {
     const userData = {
-      name: name,
+      name,
       gender: '',
       age: '',
       phone: '',
-      email: email,
+      email,
+      avatarURL: '',
     };
-
     try {
       const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      const docRef = doc(db, 'users', user.uid);
-      await setDoc(docRef, userData);
-
-      const data = {
-        email: user.email,
-        uid: user.uid,
-      };
-      return data;
+      await setUserDocument(user, userData);
+      return { uid: user.uid };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -42,13 +42,7 @@ export const login = createAsyncThunk(
   async ({ email, password }, thunkAPI) => {
     try {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
-      const data = {
-        displayName: user.displayName,
-        email: user.email,
-        uid: user.uid,
-      };
-
-      return data;
+      return { uid: user.uid };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -57,7 +51,7 @@ export const login = createAsyncThunk(
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    await auth.signOut();
+    await signOut(auth);
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }

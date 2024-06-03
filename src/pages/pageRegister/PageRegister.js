@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import RegisterForm from 'components/registerForm';
-import styles from './PageRegister.module.scss';
+import RegisterForm from 'components/forms/registerForm';
 import Backdrop from 'components/backdrop';
+import styles from './PageRegister.module.scss';
 
 const PageRegister = () => {
   return (

@@ -1,5 +1,6 @@
 import FormikDatePicker from './FormikDatePicker';
 import FormikInput from './FormikInput';
+import FormikMaskedInput from './FormikMaskedInput';
 import FormikSelect from './FormikSelect';
 
 const FormikControl = props => {
@@ -12,6 +13,8 @@ const FormikControl = props => {
       return <FormikSelect {...rest} />;
     case 'date':
       return <FormikDatePicker {...rest} />;
+    case 'phone':
+      return <FormikMaskedInput {...rest} />;
     default:
       return null;
   }

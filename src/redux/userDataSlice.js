@@ -1,8 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { editProfile, fetchUserData } from './operations';
+import {
+  changeAvatar,
+  editProfile,
+  fetchUserData,
+  removeAvatar,
+} from './operations';
 
 const initialState = {
-  items: [],
+  user: null,
   isLoading: false,
   error: null,
 };
@@ -16,15 +21,26 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 const handleFulfilledFetch = (state, action) => {
+  state.user = action.payload;
   state.isLoading = true;
   state.error = null;
-  state.items = action.payload || [];
 };
 
 const handleFulfilledEditProfile = (state, action) => {
+  state.user = action.payload;
   state.isLoading = true;
   state.error = null;
-  state.items = action.payload;
+};
+const handleFulfilledChangeAvatar = (state, action) => {
+  state.user.avatarURL = action.payload;
+  state.isLoading = true;
+  state.error = null;
+};
+
+const handleFulfilledRemoveAvatar = state => {
+  state.user.avatarURL = null;
+  state.isLoading = true;
+  state.error = null;
 };
 
 const userDataSlice = createSlice({
@@ -37,7 +53,13 @@ const userDataSlice = createSlice({
       .addCase(fetchUserData.rejected, handleRejected)
       .addCase(editProfile.pending, handlePending)
       .addCase(editProfile.fulfilled, handleFulfilledEditProfile)
-      .addCase(editProfile.rejected, handleRejected);
+      .addCase(editProfile.rejected, handleRejected)
+      .addCase(changeAvatar.pending, handlePending)
+      .addCase(changeAvatar.fulfilled, handleFulfilledChangeAvatar)
+      .addCase(changeAvatar.rejected, handleRejected)
+      .addCase(removeAvatar.pending, handlePending)
+      .addCase(removeAvatar.fulfilled, handleFulfilledRemoveAvatar)
+      .addCase(removeAvatar.rejected, handleRejected);
   },
 });
 

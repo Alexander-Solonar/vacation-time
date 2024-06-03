@@ -63,5 +63,8 @@
 <path fill="#90a4ae" style="fill: var(--color5, #90a4ae)" d="M15.922 21.333h2.546v2.667h-2.546v-2.667z"></path>
 <path fill="#90a4ae" style="fill: var(--color5, #90a4ae)" d="M19.748 21.333h2.546v2.667h-2.546v-2.667z"></path>
 </symbol>
+<symbol id="icon-close-menu" viewBox="0 0 32 32">
+<path d="M23.734 10.304l-1.504-1.504-5.963 5.962-5.962-5.962-1.504 1.504 5.962 5.962-5.962 5.963 1.504 1.504 5.962-5.963 5.963 5.963 1.504-1.504-5.963-5.963 5.963-5.962z"></path>
+</symbol>
 </defs>
 </svg>

@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Context } from '../../context/Context';
-import LangSwitchMenu from '../langSwitchMenu';
-import icons from '../../assets/images/icons.svg';
+import { Context } from '../../../context/Context';
+import LangSwitchMenu from '../../langSwitchMenu';
+import icons from '../../../assets/images/icons.svg';
 import styles from './LangSwitchButton.module.scss';
 
 const LangSwitchButton = () => {

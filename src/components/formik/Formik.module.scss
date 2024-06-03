@@ -1,5 +1,10 @@
+$primary-color: #444765;
+$error-color: #ff0000;
+
 .control {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
@@ -8,9 +13,18 @@
   font-size: 26px;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $primary-color;
+}
+
 .error {
   position: absolute;
-  color: #ff0000;
+  color: $error-color;
   bottom: -18px;
   font-size: 12px;
   font-weight: 400;

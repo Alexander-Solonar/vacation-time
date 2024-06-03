@@ -10,7 +10,7 @@ const FormikDatePicker = props => {
       <label className={styles.label} htmlFor={name}>
         {label}
       </label>
-      <Field name={name}>
+      <Field name={name} autocomplete="off">
         {({ form, field }) => {
           const { setFieldValue } = form;
           const { value } = field;
@@ -20,9 +20,13 @@ const FormikDatePicker = props => {
               id={name}
               {...field}
               {...rest}
+              showIcon
+              calendarIconClassname={styles.icon}
+              toggleCalendarOnIconClick
               selected={value}
-              autocomplete="off"
+              placeholderText="dd.MM.yyyy"
               dateFormat="dd.MM.yyyy"
+              autocomplete="off"
               onChange={val => setFieldValue(name, val)}
             />
           );

@@ -1,5 +1,5 @@
 import CottageGallery from '../../components/cottageGallery';
-import BookingForm from '../../components/bookingForm';
+import BookingForm from 'components/forms/bookingForm/BookingForm';
 import BookingTable from '../../components/bookingTable';
 import MainTitle from '../../components/mainTitle';
 import styles from './PageCottageBooking.module.scss';

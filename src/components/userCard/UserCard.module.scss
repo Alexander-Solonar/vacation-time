@@ -3,6 +3,8 @@ $label-value-color: #353c57;
 $button-default-background: #484a54;
 $button-hover-background: #69749b;
 $logout-button-background: #202846;
+$white-color: #ffffff;
+$logout-button-hover-background: #2e3963;
 
 .content {
   display: flex;
@@ -31,8 +33,21 @@ $logout-button-background: #202846;
   }
 }
 
+.avatarImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .avatarImage {
-  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .buttonsContainer {
@@ -50,8 +65,12 @@ $logout-button-background: #202846;
 }
 
 .item {
+  &:first-child {
+    font-weight: 700;
+  }
+
   &:not(:last-child) {
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid $white-color;
   }
 
   @media screen and (max-width: 820px) {
@@ -82,22 +101,13 @@ $logout-button-background: #202846;
   font-size: 20px;
   line-height: 1.29;
   text-align: center;
-  color: #ffffff;
+  color: $white-color;
   cursor: pointer;
   border: none;
   border-radius: 30px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.changeAvatarButton {
   background-color: $button-default-background;
-  &:hover {
-    background-color: $button-hover-background;
-  }
-}
 
-.settingButton {
-  background-color: $button-default-background;
   &:hover {
     background-color: $button-hover-background;
   }
@@ -108,7 +118,7 @@ $logout-button-background: #202846;
   font-size: 23px;
   line-height: 1.29;
   text-align: center;
-  color: #ffffff;
+  color: $white-color;
   cursor: pointer;
   border: none;
   border-radius: 30px;
@@ -116,6 +126,6 @@ $logout-button-background: #202846;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: #2e3963;
+    background-color: $logout-button-hover-background;
   }
 }

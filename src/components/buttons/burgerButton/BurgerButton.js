@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { Context } from '../../context/Context';
+import { Context } from 'context/Context';
 import clsx from 'clsx';
-import icons from '../../assets/images/icons.svg';
+import icons from '../../../assets/images/icons.svg';
 import styles from './BurgerButton.module.scss';
 
 const BurgerButton = () => {

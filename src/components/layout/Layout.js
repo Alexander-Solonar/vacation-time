@@ -4,8 +4,9 @@ import { Context } from '../../context/Context';
 import { throttle } from 'lodash';
 import Header from '../header';
 import Footer from '../footer';
-import ScrollTopButton from '../scrollTopButton';
+import ScrollTopButton from 'components/buttons/scrollTopButton';
 import MobileMenu from '../mobileMenu';
+
 import styles from './Layout.module.scss';
 
 const Layout = () => {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DatePickerInput from 'components/datePickerInput';
-import GuestInput from 'components/guestInput';
 import styles from './BookingForm.module.scss';
+import GuestInput from '../guestInput';
 
 const BookingForm = () => {
   const [startDate, setStartDate] = useState(null);

@@ -1,4 +1,4 @@
-import icons from '../../assets/images/icons.svg';
+import icons from '../../../assets/images/icons.svg';
 import styles from './GuestInput.module.scss';
 
 const GuestInput = ({ label, value, setValue, min, max }) => {

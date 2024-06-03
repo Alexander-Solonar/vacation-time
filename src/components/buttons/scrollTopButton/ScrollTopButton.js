@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
-import icons from '../../assets/images/icons.svg';
+import icons from '../../../assets/images/icons.svg';
 import styles from './ScrollTopButton.module.scss';
 
 const ScrollTopButton = () => {

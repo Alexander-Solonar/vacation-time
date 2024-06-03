@@ -1,8 +1,8 @@
 import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
-import { useDispatch } from 'react-redux';
-import { login } from '../../redux/auth/operations';
-import FormikControl from '../formik/FormikControl';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../../redux/auth/operations';
+import FormikControl from 'components/formik/FormikControl';
 import styles from './LoginForm.module.scss';
 
 const schema = object({
@@ -12,6 +12,7 @@ const schema = object({
 
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const { error } = useSelector(state => state.auth);
 
   const initialValues = {
     email: '',
@@ -45,7 +46,7 @@ const LoginForm = () => {
           label="Password"
           name="password"
         />
-
+        {error && <p className={styles.error}>Incorrect password or email</p>}
         <button className={styles.button} type="submit">
           Log in
         </button>

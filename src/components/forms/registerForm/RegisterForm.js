@@ -1,8 +1,8 @@
 import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/operations';
-import FormikControl from '../formik/FormikControl';
+import { register } from '../../../redux/auth/operations';
+import FormikControl from 'components/formik/FormikControl';
 import styles from './RegisterForm.module.scss';
 
 const schema = object({

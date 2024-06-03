@@ -1,7 +1,7 @@
 import Navigation from '../navigation';
-import LangSwitchButton from '../langSwitchButton';
+import BurgerButton from 'components/buttons/burgerButton';
+import LangSwitchButton from 'components/buttons/langSwitchButton';
 import Logo from '../logo/Logo';
-import BurgerButton from '../burgerButton';
 import styles from './Header.module.scss';
 
 const Header = () => {

@@ -2,7 +2,7 @@ import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
 import { useTranslation } from 'react-i18next';
 import Notiflix from 'notiflix';
-import FormikControl from '../formik/FormikControl';
+import FormikControl from '../../formik/FormikControl';
 import styles from './FeedbackForm.module.scss';
 
 Notiflix.Report.init({
