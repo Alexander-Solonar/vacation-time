@@ -6,12 +6,12 @@ import UserCard from 'components/userCard';
 
 const PageAccount = () => {
   const { t } = useTranslation();
-  const { isLoading } = useSelector(state => state.data);
+  const { isLoader } = useSelector(state => state.data);
 
   return (
     <div>
       <MainTitle name={t('account.title')} />
-      <div className="container">{!isLoading ? <Loader /> : <UserCard />}</div>
+      <div className="container">{!isLoader ? <Loader /> : <UserCard />}</div>
     </div>
   );
 };

@@ -27,7 +27,9 @@ const EditProfileForm = ({ items, onClose }) => {
 
   const initialValues = {
     ...items,
-    age: items.age === '' ? '' : parse(items.age, 'dd.MM.yyyy', new Date()),
+    age: items?.age ? parse(items.age, 'dd.MM.yyyy', new Date()) : '',
+    gender: '',
+    phone: '',
   };
 
   const handleSubmit = values => {
@@ -35,7 +37,7 @@ const EditProfileForm = ({ items, onClose }) => {
     dispatch(
       editProfile({
         uid,
-        values: { ...values, age: dateString, avatarURL: items.avatarURL },
+        values: { ...values, age: dateString },
       })
     );
   };

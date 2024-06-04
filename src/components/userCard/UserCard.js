@@ -11,7 +11,7 @@ import EditProfileForm from 'components/forms/editProfileForm/EditProfileForm';
 const UserCard = () => {
   const [isOpenEditForm, setIsOpenEditForm] = useState(false);
   const [isOpenAvatarUploader, setIsOpenAvatarUploader] = useState(false);
-  const { user, isLoading } = useSelector(state => state.data);
+  const { user } = useSelector(state => state.data);
   const { name, gender, age, phone, email, avatarURL } = useSelector(
     state => state.data.user || ''
   );
@@ -32,56 +32,52 @@ const UserCard = () => {
   ];
 
   return (
-    <>
-      {isLoading && (
-        <div className={styles.content}>
-          <div className={styles.infoContainer}>
-            <div>
-              <div className={styles.avatarImageContainer}>
-                <img
-                  className={styles.avatarImage}
-                  src={avatarURL ? avatarURL : userAvatar}
-                  alt="default-user-avatar"
-                />
-              </div>
-              <div className={styles.buttonsContainer}>
-                <button
-                  className={styles.changeAvatarButton}
-                  onClick={() => setIsOpenAvatarUploader(true)}
-                >
-                  {t('account.change-avatar-btn')}
-                </button>
-                <button
-                  className={styles.settingButton}
-                  onClick={() => setIsOpenEditForm(true)}
-                >
-                  {t('account.settings-btn')}
-                </button>
-              </div>
-            </div>
-            <ul className={styles.list}>
-              {userInfo.map(({ label, value }, index) => (
-                <li className={styles.item} key={index}>
-                  <p>
-                    {label && <span className={styles.label}>{label}:</span>}
-                    <span className={styles.value}> {value}</span>
-                  </p>
-                </li>
-              ))}
-            </ul>
+    <div className={styles.content}>
+      <div className={styles.infoContainer}>
+        <div>
+          <div className={styles.avatarImageContainer}>
+            <img
+              className={styles.avatarImage}
+              src={avatarURL ? avatarURL : userAvatar}
+              alt="default-user-avatar"
+            />
           </div>
-          <button className={styles.logoutButton} onClick={handleClick}>
-            {t('account.exit-btn')}
-          </button>
-          {isOpenEditForm && (
-            <EditProfileForm items={user} onClose={setIsOpenEditForm} />
-          )}
-          {isOpenAvatarUploader && (
-            <AvatarUploader onClose={setIsOpenAvatarUploader} />
-          )}
+          <div className={styles.buttonsContainer}>
+            <button
+              className={styles.changeAvatarButton}
+              onClick={() => setIsOpenAvatarUploader(true)}
+            >
+              {t('account.change-avatar-btn')}
+            </button>
+            <button
+              className={styles.settingButton}
+              onClick={() => setIsOpenEditForm(true)}
+            >
+              {t('account.settings-btn')}
+            </button>
+          </div>
         </div>
+        <ul className={styles.list}>
+          {userInfo.map(({ label, value }, index) => (
+            <li className={styles.item} key={index}>
+              <p>
+                {label && <span className={styles.label}>{label}:</span>}
+                <span className={styles.value}> {value}</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <button className={styles.logoutButton} onClick={handleClick}>
+        {t('account.exit-btn')}
+      </button>
+      {isOpenEditForm && (
+        <EditProfileForm items={user} onClose={setIsOpenEditForm} />
       )}
-    </>
+      {isOpenAvatarUploader && (
+        <AvatarUploader onClose={setIsOpenAvatarUploader} />
+      )}
+    </div>
   );
 };
 

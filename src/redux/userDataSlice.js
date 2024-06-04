@@ -8,38 +8,38 @@ import {
 
 const initialState = {
   user: null,
-  isLoading: false,
+  isLoader: false,
   error: null,
 };
 
 const handlePending = state => {
-  state.isLoading = false;
+  state.isLoader = false;
 };
 
 const handleRejected = (state, action) => {
-  state.isLoading = true;
+  state.isLoader = true;
   state.error = action.payload;
 };
 const handleFulfilledFetch = (state, action) => {
   state.user = action.payload;
-  state.isLoading = true;
+  state.isLoader = true;
   state.error = null;
 };
 
 const handleFulfilledEditProfile = (state, action) => {
   state.user = action.payload;
-  state.isLoading = true;
+  state.isLoader = true;
   state.error = null;
 };
 const handleFulfilledChangeAvatar = (state, action) => {
   state.user.avatarURL = action.payload;
-  state.isLoading = true;
+  state.isLoader = true;
   state.error = null;
 };
 
 const handleFulfilledRemoveAvatar = state => {
   state.user.avatarURL = null;
-  state.isLoading = true;
+  state.isLoader = true;
   state.error = null;
 };
 
