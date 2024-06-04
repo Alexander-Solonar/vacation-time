@@ -1,11 +1,11 @@
 import { Suspense, useContext, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Context } from '../../context/Context';
+import { Context } from '../../../context/Context';
 import { throttle } from 'lodash';
 import Header from '../header';
 import Footer from '../footer';
 import ScrollTopButton from 'components/buttons/scrollTopButton';
-import MobileMenu from '../mobileMenu';
+import MobileMenu from 'components/mobileMenu';
 
 import styles from './Layout.module.scss';
 

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import ContactList from '../../components/contactList';
-import MainTitle from '../../components/mainTitle';
+import ContactList from 'components/contactList';
+import MainTitle from 'components/common/mainTitle';
 
 const PageContacts = () => {
   const { t } = useTranslation();

@@ -49,7 +49,7 @@ const AvatarUploader = ({ onClose }) => {
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.previewContainer}>
             <img
-              src={avatarURL ? avatarURL : preview ? preview : userAvatar}
+              src={preview ? preview : avatarURL ? avatarURL : userAvatar}
               alt="Avatar Preview"
               className={styles.previewImage}
             />

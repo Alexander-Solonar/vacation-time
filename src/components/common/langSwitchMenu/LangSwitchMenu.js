@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Context } from '../../context/Context';
+import { Context } from '../../../context/Context';
 import styles from './LangSwitchMenu.module.scss';
 
 const LangSwitchMenu = () => {

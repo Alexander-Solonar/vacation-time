@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import MainTitle from '../../components/mainTitle';
+import MainTitle from 'components/common/mainTitle';
 import styles from './PageAboutUs.module.scss';
 
 const PageAboutUs = () => {

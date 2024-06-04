@@ -1,4 +1,4 @@
-import Navigation from '../navigation';
+import Navigation from 'components/navigation';
 import BurgerButton from 'components/buttons/burgerButton';
 import LangSwitchButton from 'components/buttons/langSwitchButton';
 import Logo from '../logo/Logo';

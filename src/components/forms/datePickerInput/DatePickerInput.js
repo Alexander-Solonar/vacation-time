@@ -1,4 +1,4 @@
-import icons from '../../assets/images/icons.svg';
+import icons from '../../../assets/images/icons.svg';
 import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './DatePickerInput.module.scss';

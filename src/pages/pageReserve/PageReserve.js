@@ -1,6 +1,6 @@
-import Filter from '../../components/filter';
-import HousesList from '../../components/housesList';
-import MainTitle from '../../components/mainTitle';
+import MainTitle from 'components/common/mainTitle';
+import Filter from 'components/filter';
+import HousesList from 'components/housesList';
 
 const PageReserve = () => {
   return (

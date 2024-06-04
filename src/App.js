@@ -1,11 +1,12 @@
 import { lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import ContextProvider from './context/Context';
-import Layout from './components/layout';
+
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUserData } from './redux/operations';
+import Layout from 'components/common/layout';
 
 const Home = lazy(() => import('../src/pages/pageHome'));
 const AboutUs = lazy(() => import('../src/pages/pageAboutUs'));
