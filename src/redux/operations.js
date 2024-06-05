@@ -34,7 +34,6 @@ export const fetchUserData = createAsyncThunk(
 export const editProfile = createAsyncThunk(
   'userData/editProfile',
   async ({ uid, values }, thunkAPI) => {
-    console.log(values);
     try {
       const ref = doc(db, 'users', uid);
 

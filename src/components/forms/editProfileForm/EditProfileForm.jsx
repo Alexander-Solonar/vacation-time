@@ -1,33 +1,26 @@
-import { Formik, Form } from 'formik';
-import { date, object, string } from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
+import { format, parse } from 'date-fns';
+import { Formik, Form } from 'formik';
+import { EditSchema } from 'components/formik/schemas';
 import { editProfile } from '../../../redux/operations';
 import 'react-datepicker/dist/react-datepicker.css';
 import FormikControl from '../../formik/FormikControl';
-import { format, parse } from 'date-fns';
 import icons from '../../../assets/images/icons.svg';
 import styles from './EditProfileForm.module.scss';
-
-const schema = object({
-  name: string().trim().required('This is a required field'),
-  gender: string().trim(),
-  age: date().required('This is a required field'),
-  phone: string(),
-  email: string().trim().required('This is a required field'),
-});
 
 const vary = [
   { value: 'male', label: 'Male' },
   { value: 'female', label: 'Female' },
 ];
 
-const EditProfileForm = ({ items, onClose }) => {
+const EditProfileForm = ({ onClose }) => {
   const { uid } = useSelector(state => state.auth);
+  const { user } = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   const initialValues = {
-    ...items,
-    age: items?.age ? parse(items.age, 'dd.MM.yyyy', new Date()) : '',
+    ...user,
+    age: user?.age ? parse(user.age, 'dd.MM.yyyy', new Date()) : '',
     gender: '',
     phone: '',
   };
@@ -52,7 +45,7 @@ const EditProfileForm = ({ items, onClose }) => {
         </button>
         <Formik
           initialValues={initialValues}
-          validationSchema={schema}
+          validationSchema={EditSchema}
           onSubmit={handleSubmit}
         >
           {() => (
@@ -75,8 +68,8 @@ const EditProfileForm = ({ items, onClose }) => {
               <FormikControl
                 className={styles.input}
                 control="date"
-                label="Age"
-                name="age"
+                label="DOB"
+                name="dob"
               />
 
               <FormikControl

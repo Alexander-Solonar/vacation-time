@@ -1,15 +1,9 @@
 import { Form, Formik } from 'formik';
-import { object, string } from 'yup';
+import { registerSchema } from 'components/formik/schemas';
 import { useDispatch } from 'react-redux';
 import { register } from '../../../redux/auth/operations';
 import FormikControl from 'components/formik/FormikControl';
 import styles from './RegisterForm.module.scss';
-
-const schema = object({
-  name: string().trim().required('Name is a required field'),
-  email: string().trim().required('Email is a required field'),
-  password: string().trim().required('Password is a required field'),
-});
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -29,7 +23,7 @@ const RegisterForm = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={schema}
+      validationSchema={registerSchema}
       onSubmit={handleSubmit}
     >
       <Form className={styles.form}>

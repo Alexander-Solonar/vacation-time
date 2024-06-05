@@ -9,9 +9,8 @@ import AvatarUploader from 'components/avatarUploader';
 import EditProfileForm from 'components/forms/editProfileForm/EditProfileForm';
 
 const UserCard = () => {
-  const [isOpenEditForm, setIsOpenEditForm] = useState(false);
-  const [isOpenAvatarUploader, setIsOpenAvatarUploader] = useState(false);
-  const { user } = useSelector(state => state.data);
+  const [showEditForm, setShownEditForm] = useState(false);
+  const [showAvatarUploader, setShowAvatarUploader] = useState(false);
   const { name, gender, age, phone, email, avatarURL } = useSelector(
     state => state.data.user || ''
   );
@@ -45,13 +44,13 @@ const UserCard = () => {
           <div className={styles.buttonsContainer}>
             <button
               className={styles.changeAvatarButton}
-              onClick={() => setIsOpenAvatarUploader(true)}
+              onClick={() => setShowAvatarUploader(true)}
             >
               {t('account.change-avatar-btn')}
             </button>
             <button
               className={styles.settingButton}
-              onClick={() => setIsOpenEditForm(true)}
+              onClick={() => setShownEditForm(true)}
             >
               {t('account.settings-btn')}
             </button>
@@ -71,12 +70,8 @@ const UserCard = () => {
       <button className={styles.logoutButton} onClick={handleClick}>
         {t('account.exit-btn')}
       </button>
-      {isOpenEditForm && (
-        <EditProfileForm items={user} onClose={setIsOpenEditForm} />
-      )}
-      {isOpenAvatarUploader && (
-        <AvatarUploader onClose={setIsOpenAvatarUploader} />
-      )}
+      {showEditForm && <EditProfileForm onClose={setShownEditForm} />}
+      {showAvatarUploader && <AvatarUploader onClose={setShowAvatarUploader} />}
     </div>
   );
 };

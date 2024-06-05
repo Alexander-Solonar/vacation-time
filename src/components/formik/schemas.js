@@ -1,0 +1,28 @@
+import { date, object, string } from 'yup';
+
+export const registerSchema = object({
+  name: string().trim().required('Name is a required field'),
+  email: string().trim().required('Email is a required field'),
+  password: string().trim().required('Password is a required field'),
+});
+
+export const LoginSchema = object({
+  email: string().trim().required('Email is a required field'),
+  password: string().trim().required('Password is a required field'),
+});
+
+export const EditSchema = object({
+  name: string().trim().required('This is a required field'),
+  gender: string().trim(),
+  age: date(),
+  phone: string(),
+  email: string().trim().required('This is a required field'),
+});
+
+export const feedbackSchema = object({
+  name: string().trim().required('Name is a required field'),
+  phone: string()
+    .trim()
+    .matches(/^\+?3?8?(0\d{9})$/, 'Invalid phone number')
+    .required('Phone is a required field'),
+});

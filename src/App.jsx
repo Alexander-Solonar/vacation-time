@@ -17,7 +17,7 @@ const Register = lazy(() => import('../src/pages/pageRegister'));
 const Login = lazy(() => import('../src/pages/pageLogin'));
 const Account = lazy(() => import('../src/pages/pageAccount'));
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const { uid } = useSelector(state => state.auth);
 
@@ -56,6 +56,6 @@ function App() {
       </Routes>
     </ContextProvider>
   );
-}
+};
 
 export default App;

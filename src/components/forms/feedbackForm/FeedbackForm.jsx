@@ -1,5 +1,5 @@
 import { Form, Formik } from 'formik';
-import { object, string } from 'yup';
+import { feedbackSchema } from 'components/formik/schemas';
 import { useTranslation } from 'react-i18next';
 import Notiflix from 'notiflix';
 import FormikControl from '../../formik/FormikControl';
@@ -14,14 +14,6 @@ Notiflix.Report.init({
     buttonBackground: '#2e3963',
     backOverlayColor: '#552db133',
   },
-});
-
-const schema = object({
-  name: string().trim().required('Name is a required field'),
-  phone: string()
-    .trim()
-    .matches(/^\+?3?8?(0\d{9})$/, 'Invalid phone number')
-    .required('Phone is a required field'),
 });
 
 const FeedbackForm = () => {
@@ -47,7 +39,7 @@ const FeedbackForm = () => {
       <div className="container">
         <Formik
           initialValues={initialValues}
-          validationSchema={schema}
+          validationSchema={feedbackSchema}
           onSubmit={handleSubmit}
         >
           <Form className={styles.form}>
