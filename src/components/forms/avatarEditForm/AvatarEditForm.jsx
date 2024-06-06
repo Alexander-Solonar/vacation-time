@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import styles from './AvatarUploader.module.scss';
-import icons from '../../assets/images/icons.svg';
-import userAvatar from '../../assets/images/user-avatar.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeAvatar, removeAvatar } from '../../redux/operations';
+import { useTranslation } from 'react-i18next';
+import { changeAvatar, removeAvatar } from '../../../redux/operations';
+import userAvatar from '../../../assets/images/user-avatar.png';
+import icons from '../../../assets/images/icons.svg';
 
-const AvatarUploader = ({ onClose }) => {
+import styles from './AvatarEditForm.module.scss';
+
+const AvatarEditForm = ({ onClose }) => {
   const [avatar, setAvatar] = useState(null);
   const [preview, setPreview] = useState(null);
-  const dispatch = useDispatch();
   const { uid } = useSelector(state => state.auth);
   const { avatarURL } = useSelector(state => state.data.user);
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
 
   const handleFileChange = event => {
     const file = event.target.files[0];
@@ -61,12 +64,12 @@ const AvatarUploader = ({ onClose }) => {
               className={styles.inputLabel}
               onClick={handleRemovePhoto}
             >
-              Удалить фото
+              {t('avatar.remove-photo')}
             </button>
           )}
 
           <label htmlFor="fileInput" className={styles.inputLabel}>
-            Выбрать файл
+            {t('avatar.select-file')}
           </label>
           <input
             id="fileInput"
@@ -79,7 +82,7 @@ const AvatarUploader = ({ onClose }) => {
             className={styles.submitButton}
             disabled={!avatar}
           >
-            Загрузить аватар
+            {t('avatar.download-avatar-btn')}
           </button>
         </form>
       </div>
@@ -87,4 +90,4 @@ const AvatarUploader = ({ onClose }) => {
   );
 };
 
-export default AvatarUploader;
+export default AvatarEditForm;

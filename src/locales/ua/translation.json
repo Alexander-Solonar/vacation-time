@@ -70,12 +70,18 @@
 
   "account": {
     "title": "Особистий кабінет",
-    "sex": "Стать",
+    "name": "Ім’я",
+    "gender": "Стать",
     "date-birth": "Дата народження",
     "phone": "Мобільний телефон",
     "email": "Ел. пошта",
     "change-avatar-btn": "Змінити аватар",
     "settings-btn": "Налаштування",
     "exit-btn": "Вийти"
+  },
+  "avatar": {
+    "download-avatar-btn": "Завантажити аватар",
+    "select-file": "Вибрати файл",
+    "remove-photo": "Видалити фото"
   }
 }

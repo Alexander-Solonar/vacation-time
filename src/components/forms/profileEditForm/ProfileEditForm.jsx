@@ -1,38 +1,36 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { editProfile } from '../../../redux/operations';
 import { format, parse } from 'date-fns';
 import { Formik, Form } from 'formik';
 import { EditSchema } from 'components/formik/schemas';
-import { editProfile } from '../../../redux/operations';
-import 'react-datepicker/dist/react-datepicker.css';
 import FormikControl from '../../formik/FormikControl';
 import icons from '../../../assets/images/icons.svg';
-import styles from './EditProfileForm.module.scss';
 
-const vary = [
+import 'react-datepicker/dist/react-datepicker.css';
+import styles from './ProfileEditForm.module.scss';
+
+const genderOptions = [
   { value: 'male', label: 'Male' },
   { value: 'female', label: 'Female' },
 ];
 
-const EditProfileForm = ({ onClose }) => {
+const initialValues = user => ({
+  ...user,
+  dob: user?.dob ? parse(user.dob, 'dd.MM.yyyy', new Date()) : '',
+  gender: '',
+  phone: '',
+});
+
+const ProfileEditForm = ({ onClose }) => {
   const { uid } = useSelector(state => state.auth);
   const { user } = useSelector(state => state.data);
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
-  const initialValues = {
-    ...user,
-    age: user?.age ? parse(user.age, 'dd.MM.yyyy', new Date()) : '',
-    gender: '',
-    phone: '',
-  };
-
   const handleSubmit = values => {
-    const dateString = format(values.age, 'dd.MM.yyyy');
-    dispatch(
-      editProfile({
-        uid,
-        values: { ...values, age: dateString },
-      })
-    );
+    const dateString = values.dob ? format(values.dob, 'dd.MM.yyyy') : '';
+    dispatch(editProfile({ uid, values: { ...values, dob: dateString } }));
   };
 
   return (
@@ -44,7 +42,7 @@ const EditProfileForm = ({ onClose }) => {
           </svg>
         </button>
         <Formik
-          initialValues={initialValues}
+          initialValues={initialValues(user)}
           validationSchema={EditSchema}
           onSubmit={handleSubmit}
         >
@@ -54,21 +52,21 @@ const EditProfileForm = ({ onClose }) => {
                 className={styles.input}
                 control="input"
                 type="text"
-                label="Name"
+                label={t('account.name')}
                 name="name"
               />
               <FormikControl
                 className={styles.input}
                 control="select"
-                label="Gender"
+                label={t('account.gender')}
                 name="gender"
-                options={vary}
+                options={genderOptions}
               />
 
               <FormikControl
                 className={styles.input}
                 control="date"
-                label="DOB"
+                label={t('account.date-birth')}
                 name="dob"
               />
 
@@ -76,14 +74,14 @@ const EditProfileForm = ({ onClose }) => {
                 className={styles.input}
                 control="phone"
                 type="text"
-                label="Phone"
+                label={t('account.phone')}
                 name="phone"
               />
               <FormikControl
                 className={styles.input}
                 control="input"
                 type="email"
-                label="Email"
+                label={t('account.email')}
                 name="email"
               />
               <button className={styles.submitButton} type="submit">
@@ -97,4 +95,4 @@ const EditProfileForm = ({ onClose }) => {
   );
 };
 
-export default EditProfileForm;
+export default ProfileEditForm;

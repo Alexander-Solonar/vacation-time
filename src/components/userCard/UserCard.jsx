@@ -1,17 +1,17 @@
-import { useTranslation } from 'react-i18next';
-import userAvatar from '../../assets/images/user-avatar.png';
-import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from '../../redux/auth/operations';
-
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { logOut } from '../../redux/auth/operations';
+import AvatarEditForm from 'components/forms/avatarEditForm';
+import ProfileEditForm from 'components/forms/profileEditForm';
+import userAvatar from '../../assets/images/user-avatar.png';
+
 import styles from './UserCard.module.scss';
-import AvatarUploader from 'components/avatarUploader';
-import EditProfileForm from 'components/forms/editProfileForm/EditProfileForm';
 
 const UserCard = () => {
-  const [showEditForm, setShownEditForm] = useState(false);
-  const [showAvatarUploader, setShowAvatarUploader] = useState(false);
-  const { name, gender, age, phone, email, avatarURL } = useSelector(
+  const [showProfileEditForm, setShownProfileEditForm] = useState(false);
+  const [showAvatarEditForm, setShowAvatarEditForm] = useState(false);
+  const { name, gender, dob, phone, email, avatarURL } = useSelector(
     state => state.data.user || ''
   );
 
@@ -23,9 +23,9 @@ const UserCard = () => {
   };
 
   const userInfo = [
-    { value: name },
-    { label: t('account.sex'), value: gender },
-    { label: t('account.date-birth'), value: age },
+    { label: '', value: name },
+    { label: t('account.gender'), value: gender },
+    { label: t('account.date-birth'), value: dob },
     { label: t('account.phone'), value: phone },
     { label: t('account.email'), value: email },
   ];
@@ -44,13 +44,13 @@ const UserCard = () => {
           <div className={styles.buttonsContainer}>
             <button
               className={styles.changeAvatarButton}
-              onClick={() => setShowAvatarUploader(true)}
+              onClick={() => setShowAvatarEditForm(true)}
             >
               {t('account.change-avatar-btn')}
             </button>
             <button
               className={styles.settingButton}
-              onClick={() => setShownEditForm(true)}
+              onClick={() => setShownProfileEditForm(true)}
             >
               {t('account.settings-btn')}
             </button>
@@ -70,8 +70,10 @@ const UserCard = () => {
       <button className={styles.logoutButton} onClick={handleClick}>
         {t('account.exit-btn')}
       </button>
-      {showEditForm && <EditProfileForm onClose={setShownEditForm} />}
-      {showAvatarUploader && <AvatarUploader onClose={setShowAvatarUploader} />}
+      {showProfileEditForm && (
+        <ProfileEditForm onClose={setShownProfileEditForm} />
+      )}
+      {showAvatarEditForm && <AvatarEditForm onClose={setShowAvatarEditForm} />}
     </div>
   );
 };

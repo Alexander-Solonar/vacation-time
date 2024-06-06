@@ -14,7 +14,7 @@ export const LoginSchema = object({
 export const EditSchema = object({
   name: string().trim().required('This is a required field'),
   gender: string().trim(),
-  age: date(),
+  dob: date(),
   phone: string(),
   email: string().trim().required('This is a required field'),
 });
