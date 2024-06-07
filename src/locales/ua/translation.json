@@ -83,5 +83,15 @@
     "download-avatar-btn": "Завантажити аватар",
     "select-file": "Вибрати файл",
     "remove-photo": "Видалити фото"
+  },
+  "form": {
+    "name": "Ім’я",
+    "email": "Ел. пошта",
+    "password": "Пароль",
+    "log-in-btn": "Увійти",
+    "register-btn": "Реєстрація",
+    "placeholderName": "Ваше ім’я",
+    "placeholderEmail": "Ваша ел. пошта",
+    "placeholderPassword": "Ваш пароль"
   }
 }

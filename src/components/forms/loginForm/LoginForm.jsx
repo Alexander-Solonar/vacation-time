@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { Form, Formik } from 'formik';
-import { LoginSchema } from 'components/formik/schemas';
 import { login } from '../../../redux/auth/operations';
+import { LoginSchema } from 'components/formik/schemas';
 import FormikControl from 'components/formik/FormikControl';
+
 import styles from './LoginForm.module.scss';
 
 const LoginForm = () => {
-  const dispatch = useDispatch();
   const { error } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const initialValues = {
     email: '',
@@ -26,24 +29,25 @@ const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className={styles.form}>
-        <h1 className={styles.title}>User Log in</h1>
         <FormikControl
           className={styles.input}
           control="input"
           type="email"
-          label="Email"
+          label={t('form.email')}
           name="email"
+          placeholder={t('form.placeholderEmail')}
         />
         <FormikControl
           className={styles.input}
           control="input"
           type="password"
-          label="Password"
+          label={t('form.password')}
           name="password"
+          placeholder={t('form.placeholderPassword')}
         />
         {error && <p className={styles.error}>Incorrect password or email</p>}
         <button className={styles.button} type="submit">
-          Log in
+          {t('form.log-in-btn')}
         </button>
       </Form>
     </Formik>

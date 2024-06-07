@@ -79,9 +79,14 @@
     "settings-btn": "Настройки",
     "exit-btn": "Выйти"
   },
-  "avatar": {
-    "download-avatar-btn": "Загрузить аватар",
-    "select-file": "Выбрать файл",
-    "remove-photo": "Удалить фото"
+  "form": {
+    "name": "Имя",
+    "email": "Ел. почта",
+    "password": "Пароль",
+    "log-in-btn": "Войти",
+    "register-btn": "Регистрация",
+    "placeholderName": "Ваше имя",
+    "placeholderEmail": "Ваша ел. почта",
+    "placeholderPassword": "Ваш пароль"
   }
 }

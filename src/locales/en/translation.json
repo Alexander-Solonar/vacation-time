@@ -83,5 +83,15 @@
     "download-avatar-btn": "Download avatar",
     "select-file": "Select file",
     "remove-photo": "Remove photo"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "log-in-btn": "Log in",
+    "register-btn": "Register",
+    "placeholderName": "Your name",
+    "placeholderEmail": "Your email",
+    "placeholderPassword": "Your password"
   }
 }
