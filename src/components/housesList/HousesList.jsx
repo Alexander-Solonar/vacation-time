@@ -1,45 +1,39 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import clsx from 'clsx';
-import bakota from '../../assets/images/bakota.webp';
 import icons from '../../assets/images/icons.svg';
 import styles from './HousesList.module.scss';
+import { useTranslation } from 'react-i18next';
 
-const houses = [1, 2, 3, 4, 5];
+const HousesList = ({ filteredHouses }) => {
+  const [iconColors, setIconColors] = useState({});
+  const { t } = useTranslation();
 
-const HousesList = () => {
-  const [isStarClicked, setIsStarClicked] = useState(false);
-
-  const SvgClassName = clsx(styles.iconStar, {
-    [styles.clicked]: isStarClicked,
-  });
-
-  const handleFavoriteIcon = () => {
-    setIsStarClicked(!isStarClicked);
+  const handleFavoriteIcon = id => {
+    setIconColors(prevColors => ({
+      ...prevColors,
+      [id]: prevColors[id] === '#f4dc00' ? 'black' : '#f4dc00',
+    }));
   };
 
   return (
     <ul>
-      {houses.map(e => (
-        <li key={e} className={styles.item}>
-          <img src={bakota} width={485} alt="bakota" />
+      {filteredHouses.map(el => (
+        <li key={el.id} className={styles.item}>
+          <img src={el.picture} width={485} alt="cottage" />
           <div className={styles.description}>
-            <h2 className={styles.title}>Незвідана Бакота</h2>
-            <p className={styles.text}>
-              У Хмельницькій області розташований загублений край - Бакота.
-              Мальовничий каньйон з давньою історією захоплює своїми просторами
-              та незвичною атмосферою. Бджільництво, свіжий мед із польових
-              трав, дотик до природи.
-            </p>
+            <h2 className={styles.title}>{el.title}</h2>
+            <p className={styles.text}>{el.text}</p>
           </div>
-          <Link className={styles.detailsButton} to={`/reserve/house-${e}`}>
-            Детальніше
+          <Link className={styles.detailsButton} to={`/reserve/house-${el.id}`}>
+            {t('reserve.button-more')}
           </Link>
+
           <svg
-            className={SvgClassName}
+            className={styles.iconStar}
             width="42"
             height="42"
-            onClick={handleFavoriteIcon}
+            onClick={() => handleFavoriteIcon(el.id)}
+            fill={iconColors[el.id] || 'black'}
           >
             <use href={`${icons}#icon-star`} />
           </svg>

@@ -93,5 +93,9 @@
     "placeholderName": "Ваше ім’я",
     "placeholderEmail": "Ваша ел. пошта",
     "placeholderPassword": "Ваш пароль"
+  },
+  "reserve": {
+    "title": "Забронювати будиночок",
+    "button-more": "Детальніше"
   }
 }

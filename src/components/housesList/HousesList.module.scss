@@ -76,12 +76,7 @@ $icon-star-color: #f4dc00;
 
 .iconStar {
   position: absolute;
-  fill: var(--primary-white-color);
   top: 15px;
   right: 15px;
   cursor: pointer;
-}
-
-.clicked {
-  fill: $icon-star-color;
 }

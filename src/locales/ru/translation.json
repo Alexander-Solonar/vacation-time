@@ -88,5 +88,9 @@
     "placeholderName": "Ваше имя",
     "placeholderEmail": "Ваша ел. почта",
     "placeholderPassword": "Ваш пароль"
+  },
+  "reserve": {
+    "title": "Забронировать домик",
+    "button-more": "Подробнее"
   }
 }

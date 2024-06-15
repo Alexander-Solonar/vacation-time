@@ -93,5 +93,9 @@
     "placeholderName": "Your name",
     "placeholderEmail": "Your email",
     "placeholderPassword": "Your password"
+  },
+  "reserve": {
+    "title": "Book a house",
+    "button-more": "More"
   }
 }

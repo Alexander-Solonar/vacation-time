@@ -3,7 +3,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
-import { auth, db } from '../../firebaseConfig';
+import { auth, db } from '../../firebase/firebaseConfig';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { doc, setDoc } from 'firebase/firestore';
 

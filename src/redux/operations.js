@@ -6,7 +6,7 @@ import {
   getDocs,
   updateDoc,
 } from 'firebase/firestore';
-import { db, storage } from '../firebaseConfig';
+import { db, storage } from '../firebase/firebaseConfig';
 import {
   deleteObject,
   getDownloadURL,
