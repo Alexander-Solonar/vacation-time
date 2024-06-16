@@ -1,56 +1,43 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import { useTranslation } from 'react-i18next';
+import { fetchHouses } from '../../firebase/APIFirebase';
 import icons from '../../assets/images/icons.svg';
-import img from '../../assets/images/image 3.webp';
 import 'swiper/scss';
-
 import styles from './SlideSwiper.module.scss';
 
-const array = [1, 2, 3, 4, 5, 6];
-
 const SlideSwiper = () => {
-  const { t } = useTranslation();
+  const [housesList, setHousesList] = useState([]);
+  const { i18n, t } = useTranslation();
+  const lng = i18n.resolvedLanguage;
 
-  const textInitial = t('swiper.text');
+  useEffect(() => {
+    fetchHouses(setHousesList, lng);
+  }, [lng]);
 
-  const text =
-    textInitial.length > 177 ? textInitial.slice(0, 177) + '...' : textInitial;
+  const adaptedText = text =>
+    text.length > 177 ? text.slice(0, 177) + '...' : text;
 
   return (
     <section>
       <div className="container">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            clickable: true,
-            el: `.${styles['swiper-pagination']}`,
-            bulletClass: `${styles.swiperPaginationBullet}`,
-            bulletActiveClass: `${styles.swiperPaginationBulletActive}`,
-          }}
-          navigation={{
-            prevEl: `.${styles.swiperButtonPrev}`,
-            nextEl: `.${styles.swiperButtonNext}`,
-          }}
-          modules={[Pagination, Navigation]}
-          className={styles.mySwiper}
-        >
-          {array.map(e => (
-            <SwiperSlide key={e}>
+        <Swiper {...swiperConfig}>
+          {housesList.map(el => (
+            <SwiperSlide key={el.id}>
               <div className={styles.content}>
-                <img src={img} alt="house" />
+                <img src={el.picture} alt="house" width={1233} />
               </div>
 
               <div className={styles.blockDesc}>
-                <p className={styles.text}>{text}</p>
-                <button className={styles.button}>
+                <p className={styles.text}>{adaptedText(el.text)}</p>
+                <Link className={styles.button} to={`/reserve/house-${el.id}`}>
                   {t('swiper.button')}
                   <svg width={28} height={14}>
                     <use href={`${icons}#icon-arrow`}></use>
                   </svg>
-                </button>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
@@ -73,3 +60,21 @@ const SlideSwiper = () => {
 };
 
 export default SlideSwiper;
+
+const swiperConfig = {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: false,
+  pagination: {
+    clickable: true,
+    el: `.${styles['swiper-pagination']}`,
+    bulletClass: `${styles.swiperPaginationBullet}`,
+    bulletActiveClass: `${styles.swiperPaginationBulletActive}`,
+  },
+  navigation: {
+    prevEl: `.${styles.swiperButtonPrev}`,
+    nextEl: `.${styles.swiperButtonNext}`,
+  },
+  modules: [Pagination, Navigation],
+  className: styles.mySwiper,
+};

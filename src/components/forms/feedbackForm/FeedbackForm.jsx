@@ -53,14 +53,12 @@ const FeedbackForm = () => {
                 name="name"
                 placeholder={t('feedbackForm.placeholderName')}
               />
-
               <FormikControl
                 className={styles.input}
-                control="input"
+                control="phone"
                 type="text"
                 label={t('feedbackForm.phone')}
                 name="phone"
-                placeholder={t('feedbackForm.placeholderPhone')}
               />
             </div>
             <button className={styles.button} type="submit">

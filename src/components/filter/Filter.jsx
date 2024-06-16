@@ -22,16 +22,14 @@ const Filter = ({ filter, setSearchParams }) => {
     if (filter) {
       const selected = filterOptions.find(option => option.value === filter);
       setSelectedOption(selected.label);
-    } else {
-      setSelectedOption('');
     }
   }, [filter, filterOptions]);
 
   const handleChange = option => {
     if (option) {
       setSearchParams({ filter: option.value });
-      setSelectedOption(option.label);
     } else {
+      setSelectedOption(null);
       setSearchParams('');
     }
   };

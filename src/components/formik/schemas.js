@@ -21,8 +21,5 @@ export const EditSchema = object({
 
 export const feedbackSchema = object({
   name: string().trim().required('Name is a required field'),
-  phone: string()
-    .trim()
-    .matches(/^\+?3?8?(0\d{9})$/, 'Invalid phone number')
-    .required('Phone is a required field'),
+  phone: string(),
 });

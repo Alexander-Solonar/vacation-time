@@ -2,9 +2,7 @@ import { ErrorMessage, Field } from 'formik';
 import DateView from 'react-datepicker';
 import styles from './Formik.module.scss';
 
-const FormikDatePicker = props => {
-  const { label, name, ...rest } = props;
-
+const FormikDatePicker = ({ label, name, ...props }) => {
   return (
     <div className={styles.control}>
       <label className={styles.label} htmlFor={name}>
@@ -19,14 +17,13 @@ const FormikDatePicker = props => {
             <DateView
               id={name}
               {...field}
-              {...rest}
+              {...props}
               showIcon
               calendarIconClassname={styles.icon}
               toggleCalendarOnIconClick
               selected={value}
               placeholderText="dd.MM.yyyy"
               dateFormat="dd.MM.yyyy"
-              autocomplete="off"
               onChange={val => setFieldValue(name, val)}
             />
           );
