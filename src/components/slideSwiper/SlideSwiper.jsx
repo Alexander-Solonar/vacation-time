@@ -1,21 +1,13 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import { fetchHouses } from '../../firebase/APIFirebase';
 import icons from '../../assets/images/icons.svg';
 import 'swiper/scss';
 import styles from './SlideSwiper.module.scss';
 
-const SlideSwiper = () => {
-  const [housesList, setHousesList] = useState([]);
-  const { i18n, t } = useTranslation();
-  const lng = i18n.resolvedLanguage;
-
-  useEffect(() => {
-    fetchHouses(setHousesList, lng);
-  }, [lng]);
+const SlideSwiper = ({ housesList }) => {
+  const { t } = useTranslation();
 
   const adaptedText = text =>
     text.length > 177 ? text.slice(0, 177) + '...' : text;
@@ -26,8 +18,8 @@ const SlideSwiper = () => {
         <Swiper {...swiperConfig}>
           {housesList.map(el => (
             <SwiperSlide key={el.id}>
-              <div className={styles.content}>
-                <img src={el.picture} alt="house" width={1233} />
+              <div className={styles.imgBlock}>
+                <img src={el.picture} alt="house" width={1233} height={600} />
               </div>
 
               <div className={styles.blockDesc}>

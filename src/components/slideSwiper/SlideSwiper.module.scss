@@ -10,10 +10,19 @@ $white-color: #ffffff;
 $light-grey-color: #ffffffcc;
 $dark-blue-color: #202846;
 $hover-blue-color: #2e3963;
+$img-block-background: #c1c1c3e6;
 
 .mySwiper {
   position: relative;
   margin-top: 53px;
+  height: 620px;
+  background-color: $img-block-background;
+}
+
+.imgBlock {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .blockDesc {

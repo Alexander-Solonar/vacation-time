@@ -1,3 +1,7 @@
+$background-color-content: #c1c1c3e6;
+$background-color-text: #dcdcdc;
+$text-color: #202846;
+
 .content {
   display: flex;
   justify-content: center;
@@ -5,7 +9,7 @@
   gap: 18px;
   margin-top: 50px;
   padding: 30px 70px;
-  background-color: #c1c1c3e6;
+  background-color: $background-color-content;
 }
 
 .text {
@@ -18,8 +22,8 @@
   font-weight: 400;
   line-height: 1.36;
   text-align: center;
-  color: #202846;
-  background-color: #dcdcdc;
+  color: $text-color;
+  background-color: $background-color-text;
 
   @media screen and (max-width: 424px) {
     font-size: 18px;
